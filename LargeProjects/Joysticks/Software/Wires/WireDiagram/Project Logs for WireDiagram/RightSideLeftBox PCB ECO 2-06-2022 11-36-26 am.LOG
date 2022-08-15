@@ -1,0 +1,7 @@
+Added Component: Designator=E1(Encoder)
+Added Pin To Net: NetName=EC_A Pin=E1-0
+Added Pin To Net: NetName=GND Pin=E1-1
+Added Pin To Net: NetName=EC_B (Int) Pin=E1-2
+Added Pin To Net: NetName=-A0 Pin=E1-3
+Added Pin To Net: NetName=+A0 Pin=E1-4
+Added Member To Class: ClassName=RightSide Member=Component E1 EC11

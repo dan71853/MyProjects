@@ -1,0 +1,6 @@
+{
+    "sketch": "JopystickProMicro.ino",
+    "output": "build",
+    "board": "arduino:avr:micro",
+    "port": "COM16"
+}

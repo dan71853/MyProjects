@@ -1,0 +1,5 @@
+{
+    "sketch": "LEDStrip.ino",
+    "board": "arduino:avr:micro",
+    "port": "COM10"
+}

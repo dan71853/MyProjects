@@ -1,0 +1,9 @@
+Added Component: Designator=L1(LCD Display)
+Added Pin To Net: NetName=NetL1_1 Pin=L1-1
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL1_3 Pin=L1-3
+Added Pin To Net: NetName=NetL1_4 Pin=L1-4
+Added Pin To Net: NetName=NetL1_5 Pin=L1-5
+Added Pin To Net: NetName=NetL1_6 Pin=L1-6
+Added Pin To Net: NetName=NetL1_7 Pin=L1-7
+Added Member To Class: ClassName=RightSide Member=Component L1 LCD Display

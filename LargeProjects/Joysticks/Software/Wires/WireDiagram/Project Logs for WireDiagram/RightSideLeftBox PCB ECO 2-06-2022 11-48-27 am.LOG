@@ -1,0 +1,24 @@
+Added Component: Designator=MUX(CD74HC4067)
+Added Pin To Net: NetName=MUX_C5 Pin=MUX-4
+Added Pin To Net: NetName=MUX_C4 Pin=MUX-5
+Added Pin To Net: NetName=MUX_C3 Pin=MUX-6
+Added Pin To Net: NetName=MUX_C2 Pin=MUX-7
+Added Pin To Net: NetName=MUX_C1 Pin=MUX-8
+Added Pin To Net: NetName=MUX_C0 Pin=MUX-9
+Added Pin To Net: NetName=GND Pin=MUX-12
+Added Pin To Net: NetName=GND Pin=MUX-13
+Added Pin To Net: NetName=GND Pin=MUX-15
+Added Pin To Net: NetName=+3.3 Pin=MUX-24
+Added Pin To Net: NetName=NetMUX_1 Pin=MUX-1
+Added Pin To Net: NetName=NetMUX_1 Pin=U1-4
+Added Net: Name=NetMUX_1
+Added Pin To Net: NetName=NetMUX_10 Pin=MUX-10
+Added Pin To Net: NetName=NetMUX_10 Pin=U1-12
+Added Net: Name=NetMUX_10
+Added Pin To Net: NetName=NetMUX_11 Pin=MUX-11
+Added Pin To Net: NetName=NetMUX_11 Pin=U1-11
+Added Net: Name=NetMUX_11
+Added Pin To Net: NetName=NetMUX_14 Pin=MUX-14
+Added Pin To Net: NetName=NetMUX_14 Pin=U1-14
+Added Net: Name=NetMUX_14
+Added Member To Class: ClassName=RightSide Member=Component MUX CD74HC4067

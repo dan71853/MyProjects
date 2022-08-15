@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=U1 Old Footprint=DIP36 New Footprint=DIP38
+Added Pin To Net: NetName=+5V Pin=U1-38

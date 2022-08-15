@@ -1,0 +1,67 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\variants\\RASPBERRY_PI_PICO"
+  },
+  {
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\temp\\sketch\\JoystickPico.ino.cpp",
+    "Include": "PicoGamepad1.h",
+    "Includepath": "C:\\Users\\somme\\Documents\\Arduino\\libraries\\PicoGamepad-master"
+  },
+  {
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\temp\\sketch\\JoystickPico.ino.cpp",
+    "Include": "PluggableUSBHID.h",
+    "Includepath": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\USBHID\\src"
+  },
+  {
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\temp\\sketch\\JoystickPico.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\Wire"
+  },
+  {
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\temp\\sketch\\JoystickPico.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\Documents\\Arduino\\libraries\\PicoGamepad-master\\PicoGamepad1.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\Documents\\Arduino\\libraries\\PicoGamepad-master\\PicoGamepad2.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\USBHID\\src\\USBHID.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\USBHID\\src\\USBKeyboard.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\USBHID\\src\\USBMouse.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\USBHID\\src\\USBMouseKeyboard.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\3.1.1\\libraries\\Wire\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

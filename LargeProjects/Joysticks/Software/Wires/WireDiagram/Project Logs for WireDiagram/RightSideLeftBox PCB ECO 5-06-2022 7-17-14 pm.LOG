@@ -1,0 +1,9 @@
+Added Component: Designator=U4(LevelShifter)
+Added Pin To Net: NetName=SDA_ESP_Micro_HV Pin=U4-1
+Added Pin To Net: NetName=SCL_ESP_Micro_HV Pin=U4-2
+Added Pin To Net: NetName=+3.3 Pin=U4-3
+Added Pin To Net: NetName=GND Pin=U4-9
+Added Pin To Net: NetName=+5 Pin=U4-10
+Added Pin To Net: NetName=SCL_ESP_Micro_LV Pin=U4-11
+Added Pin To Net: NetName=SDA_ESP_Micro_LV Pin=U4-12
+Added Member To Class: ClassName=RightSide Member=Component U4 LevelShifter

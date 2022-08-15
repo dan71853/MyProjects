@@ -1,0 +1,7 @@
+{
+    "sketch": "ESPTimelapse.ino",
+    "configuration": "CPUFreq=240,FlashMode=qio,FlashFreq=80",
+    "board": "esp32:esp32:esp32cam",
+    "port": "COM4",
+    "output": "temp/"
+}

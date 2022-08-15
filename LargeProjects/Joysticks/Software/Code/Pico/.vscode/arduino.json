@@ -1,0 +1,6 @@
+{
+    "sketch": "JoystickPico.ino",
+    "board": "arduino:mbed_rp2040:pico",
+    "output": "./temp",
+    "port": "COM10"
+}
