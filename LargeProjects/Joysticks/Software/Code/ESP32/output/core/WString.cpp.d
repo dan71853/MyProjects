@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\joysticks\Software\Code\ESP32\output\core\WString.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\Joysticks\Software\Code\ESP32\output\core\WString.cpp.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\WString.cpp \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32/Arduino.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32/esp_arduino_version.h \

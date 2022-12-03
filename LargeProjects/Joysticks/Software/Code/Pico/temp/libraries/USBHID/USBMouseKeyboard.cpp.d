@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\joysticks\Software\Code\Pico\temp\libraries\USBHID\USBMouseKeyboard.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\Joysticks\Software\Code\Pico\temp\libraries\USBHID\USBMouseKeyboard.cpp.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.1.1\libraries\USBHID\src\USBMouseKeyboard.cpp \
  C:\Users\somme\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.1.1\libraries\USBHID\src\USBMouseKeyboard.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\3.1.1\libraries\USBHID\src\USBMouse.h \

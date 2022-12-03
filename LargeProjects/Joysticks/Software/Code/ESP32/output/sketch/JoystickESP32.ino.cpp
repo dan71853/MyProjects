@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 #include <Wire.h>
 
 /*
@@ -61,33 +61,33 @@ uint16_t triggerTime = millis();
  * Setup I2C busses
  * Setup button matrix
  */
-#line 62 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 62 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setup();
-#line 79 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 79 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void loop();
-#line 102 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 102 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void requestEvent();
-#line 111 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 111 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void calculateHash();
-#line 122 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 122 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setupADC();
-#line 137 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 137 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateAllADCs();
-#line 152 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 152 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateADC(uint8_t MUXSelect, uint8_t bufferStart);
-#line 174 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 174 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setupButtonMatrix();
-#line 188 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 188 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateButtons();
-#line 212 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 212 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 uint8_t readTrigger(uint8_t buttonNumber);
-#line 227 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 227 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setupEncoders();
-#line 232 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 232 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 uint8_t updateEncoder(uint8_t buttonNumber);
-#line 272 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 272 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void testLCDCode();
-#line 62 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+#line 62 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setup() {
     Serial.begin(115200);
 

@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\joysticks\Software\Code\ESP32\output\core\main.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\Joysticks\Software\Code\ESP32\output\core\main.cpp.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\main.cpp \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2/tools/sdk/esp32/include/freertos/include/freertos/FreeRTOS.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/FreeRTOSConfig.h \

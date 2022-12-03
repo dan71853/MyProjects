@@ -1,12 +1,12 @@
-# 1 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
-# 2 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino" 2
+# 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 2 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino" 2
 
 /*
 
  * ADC chip
 
  */
-# 6 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 6 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 const uint8_t ADC_S0 = 19;
 const uint8_t ADC_S1 = 18;
 const uint8_t ADC_S2 = 21;
@@ -27,7 +27,7 @@ Mini X axis L, Mini X axis H,
 Button group 1  [MJS Button, trigger half, trigger full,Rest..]
 
 */
-# 19 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 19 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 uint8_t mainBuffer[32];
 boolean bufferRead = true;
 const uint8_t bufferEnd = 12;
@@ -49,7 +49,7 @@ const uint8_t I2C_ESP_Micro_SCL = 16;
  * Button Matrix
 
  */
-# 39 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 39 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 // Number of rows and columns of the button matrix
 
 
@@ -78,7 +78,7 @@ uint16_t triggerTime = millis();
  * Setup button matrix
 
  */
-# 62 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 62 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setup() {
     Serial.begin(115200);
 
@@ -99,7 +99,7 @@ void setup() {
  * Update the buffer after it gets read by the pico
 
  */
-# 79 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 79 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void loop() {
     if (bufferRead) {
         updateAllADCs();
@@ -126,7 +126,7 @@ void loop() {
  *  write the buffer and set the read flag
 
  */
-# 102 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 102 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void requestEvent() {
     I2C_Pico_ESP.write(mainBuffer, bufferEnd);
     I2C_Pico_ESP.write(hash);
@@ -150,7 +150,7 @@ void calculateHash() {
  *  Initialise all the select pins for the MUX and set them LOW
 
  */
-# 122 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 122 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setupADC() {
     pinMode(ADC_S0, 0x02);
     pinMode(ADC_S1, 0x02);
@@ -169,7 +169,7 @@ int tempInt = 1127;
  *
 
  */
-# 137 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 137 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateAllADCs() {
     updateADC(0, 0); // X axis
     updateADC(1, 2); // Y axis
@@ -190,7 +190,7 @@ void updateAllADCs() {
  * @param bufferStart Where to place in the buffer
 
  */
-# 152 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 152 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateADC(uint8_t MUXSelect, uint8_t bufferStart) {
     // Select MUX channel
     digitalWrite(ADC_S0, MUXSelect & 0b001);
@@ -216,7 +216,7 @@ void updateADC(uint8_t MUXSelect, uint8_t bufferStart) {
  *  The inputs must be set to INPUT_PULLUP
 
  */
-# 174 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 174 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void setupButtonMatrix() {
     for (uint8_t col = 0; col < 4; col++) {
         pinMode(BMColPins[col], 0x05);
@@ -234,7 +234,7 @@ void setupButtonMatrix() {
  * Save each button state to buttonStates
 
  */
-# 188 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 188 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 void updateButtons() {
     uint8_t buttonNumber = 0;
     bool buttonState = !digitalRead(0); // Read the mini joystick button
@@ -318,7 +318,7 @@ uint8_t updateEncoder(uint8_t buttonNumber) {
  * Send [uint16_t LCD digit, int8_t LCD symbol state, int8_t LED digit 0,  int8_t LED digit 1]
 
  */
-# 268 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
+# 268 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\ESP32\\JoystickESP32.ino"
 // Temp  variables to control LCD
 unsigned long tempTimer = millis();
 uint16_t tempCounter = 0;

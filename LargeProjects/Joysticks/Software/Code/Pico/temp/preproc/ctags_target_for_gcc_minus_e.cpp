@@ -1,7 +1,7 @@
-# 1 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
-# 2 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino" 2
+# 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+# 2 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino" 2
 // #include <PicoGamepad2.h>
-# 4 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino" 2
+# 4 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino" 2
 
 uint8_t mainBuffer[32];
 const uint8_t bufferEnd = 12;

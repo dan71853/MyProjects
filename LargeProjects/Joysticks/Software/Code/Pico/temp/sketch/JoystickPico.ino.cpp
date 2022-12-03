@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 #include <PicoGamepad1.h>
 // #include <PicoGamepad2.h>
 #include <Wire.h>
@@ -19,21 +19,21 @@ struct {
     int Rz;
 } axisData;
 
-#line 20 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 20 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void setup();
-#line 32 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 32 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void loop();
-#line 56 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 56 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 uint8_t calculateHash();
-#line 65 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 65 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void requestData();
-#line 81 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 81 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void readAllAxis();
-#line 89 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 89 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void readButtons();
-#line 98 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 98 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void setAllAxis();
-#line 20 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
+#line 20 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\Joysticks\\Software\\Code\\Pico\\JoystickPico.ino"
 void setup() {
     Serial.begin(115200);
     Wire.begin();
