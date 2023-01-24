@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\LEDStrip\ESP\temp\core\base64.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\LEDStrip\ESP\temp\core\base64.cpp.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\base64.cpp \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\Arduino.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\esp_arduino_version.h \

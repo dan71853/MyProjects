@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\LEDStrip\ESP\temp\core\esp32-hal-sigmadelta.c.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\LEDStrip\ESP\temp\core\esp32-hal-sigmadelta.c.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\esp32-hal-sigmadelta.c \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\esp32-hal.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2/tools/sdk/esp32/include/esp_system/include/esp_system.h \

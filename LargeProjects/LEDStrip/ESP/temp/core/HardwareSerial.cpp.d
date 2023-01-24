@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\LEDStrip\ESP\temp\core\HardwareSerial.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\LEDStrip\ESP\temp\core\HardwareSerial.cpp.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\HardwareSerial.cpp \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\variants\nodemcu-32s/pins_arduino.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\HardwareSerial.h \

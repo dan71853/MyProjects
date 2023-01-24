@@ -1,5 +1,6 @@
-# 1 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\LEDStrip\\ESP\\LEDStrip.ino"
-# 2 "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\LEDStrip\\ESP\\LEDStrip.ino" 2
+# 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\ButtonTests.ino"
+# 1 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\LEDStrip.ino"
+# 2 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\LEDStrip.ino" 2
 
 // https://esphome.io/devices/nodemcu_esp32.html
 const uint8_t LED_R = 14;
@@ -32,7 +33,7 @@ boolean modeChanged = false;
 boolean headLightsMatchChange = false;
 boolean lightsOnChanged = false;
 unsigned long debouncingTimer = millis();
-boolean deboundingTimerStarted = false;
+boolean debouncingTimerStarted = false;
 
 uint8_t mode = 0;
 uint8_t numberOfModes = 2;
@@ -46,7 +47,7 @@ void __attribute__((section(".iram1" "." "27"))) s1Pressed() {
     }
     lightsOnChanged = true;
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void __attribute__((section(".iram1" "." "28"))) s2Pressed() {
@@ -67,7 +68,7 @@ void __attribute__((section(".iram1" "." "28"))) s2Pressed() {
     }
 
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void __attribute__((section(".iram1" "." "29"))) s3Pressed() {
@@ -81,7 +82,7 @@ void __attribute__((section(".iram1" "." "29"))) s3Pressed() {
     }
     manualModeChanged = true;
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void setup() {
@@ -143,8 +144,8 @@ void headLightsOn() {
 }
 
 void loop() {
-    if (deboundingTimerStarted && millis() - debouncingTimer > 800) {
-        deboundingTimerStarted = false;
+    if (debouncingTimerStarted && millis() - debouncingTimer > 800) {
+        debouncingTimerStarted = false;
         ;
     }
     if (manualModeChanged) {
@@ -180,7 +181,7 @@ void loop() {
     if (manualMode) {
         switch (mode) {
             case 0:
-                // Mode 0, all LEDS on
+                // Mode 0, all LEDs on
                 red = 0xFF;
                 green = 0xFF;
                 blue = 0xFF;

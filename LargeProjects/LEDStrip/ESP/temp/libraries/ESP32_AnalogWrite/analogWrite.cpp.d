@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\LEDStrip\ESP\temp\libraries\ESP32_AnalogWrite\analogWrite.cpp.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\LEDStrip\ESP\temp\libraries\ESP32_AnalogWrite\analogWrite.cpp.o: \
  C:\Users\somme\Documents\Arduino\libraries\ESP32_AnalogWrite\analogWrite.cpp \
  C:\Users\somme\Documents\Arduino\libraries\ESP32_AnalogWrite\analogWrite.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32/Arduino.h \

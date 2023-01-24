@@ -31,7 +31,7 @@ boolean modeChanged = false;
 boolean headLightsMatchChange = false;
 boolean lightsOnChanged = false;
 unsigned long debouncingTimer = millis();
-boolean deboundingTimerStarted = false;
+boolean debouncingTimerStarted = false;
 
 uint8_t mode = 0;
 uint8_t numberOfModes = 2;
@@ -45,7 +45,7 @@ void IRAM_ATTR s1Pressed() {
     }
     lightsOnChanged = true;
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void IRAM_ATTR s2Pressed() {
@@ -66,7 +66,7 @@ void IRAM_ATTR s2Pressed() {
     }
 
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void IRAM_ATTR s3Pressed() {
@@ -80,7 +80,7 @@ void IRAM_ATTR s3Pressed() {
     }
     manualModeChanged = true;
     debouncingTimer = millis();
-    deboundingTimerStarted = true;
+    debouncingTimerStarted = true;
 }
 
 void setup() {
@@ -142,8 +142,8 @@ void headLightsOn() {
 }
 
 void loop() {
-    if (deboundingTimerStarted && millis() - debouncingTimer > 800) {
-        deboundingTimerStarted = false;
+    if (debouncingTimerStarted && millis() - debouncingTimer > 800) {
+        debouncingTimerStarted = false;
         interrupts();
     }
     if (manualModeChanged) {
@@ -179,7 +179,7 @@ void loop() {
     if (manualMode) {
         switch (mode) {
             case 0:
-                // Mode 0, all LEDS on
+                // Mode 0, all LEDs on
                 red = 0xFF;
                 green = 0xFF;
                 blue = 0xFF;

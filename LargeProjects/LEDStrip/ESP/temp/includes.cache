@@ -10,12 +10,12 @@
     "Includepath": "C:\\Users\\somme\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\2.0.2\\variants\\nodemcu-32s"
   },
   {
-    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\LEDStrip\\ESP\\temp\\sketch\\LEDStrip.ino.cpp",
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\temp\\sketch\\ButtonTests.ino.cpp",
     "Include": "analogWrite.h",
     "Includepath": "C:\\Users\\somme\\Documents\\Arduino\\libraries\\ESP32_AnalogWrite"
   },
   {
-    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\TestProjects\\FinalProjects\\LEDStrip\\ESP\\temp\\sketch\\LEDStrip.ino.cpp",
+    "Sourcefile": "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\temp\\sketch\\ButtonTests.ino.cpp",
     "Include": "",
     "Includepath": null
   },

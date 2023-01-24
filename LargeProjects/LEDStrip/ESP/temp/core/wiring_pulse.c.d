@@ -1,4 +1,4 @@
-c:\Users\somme\Documents\Git\TestProjects\FinalProjects\LEDStrip\ESP\temp\core\wiring_pulse.c.o: \
+c:\Users\somme\Documents\Git\MyProjects\LargeProjects\LEDStrip\ESP\temp\core\wiring_pulse.c.o: \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\wiring_pulse.c \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\wiring_private.h \
  C:\Users\somme\AppData\Local\Arduino15\packages\esp32\hardware\esp32\2.0.2\cores\esp32\Arduino.h \
