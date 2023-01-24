@@ -1,0 +1,136 @@
+{
+  "uuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+  "path": "Offline/LEDStripController",
+  "name": "LEDStripController",
+  "content": "",
+  "created_at": "2023-01-03 20:20:43",
+  "updated_at": "2023-01-04 13:07:32",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a99c40a24c75534f5220a43c4ec720e5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "9ac371982ef04968a90d675bd78095e2": 1,
+        "1bb6621b343e4c238e883be123ccaa79": 1,
+        "f79779be03f74ef6a7a1e93164160497": 1,
+        "bef7e5266fe34b5d86937eb89fe2d2f4": 2,
+        "6558d09a8117429b94fac100fa304c4f": 3,
+        "933f334536274e58a6d2e083aa7782d9": 1,
+        "9804c13a30734d1395f2bbf191dc2bee": 1,
+        "54bdeb8fabd04f0e96c51848222cac3b": 3
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Head_LED_Switch",
+          1,
+          "HEADER 1X6",
+          "H3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "64f3f8ba6f7a4b82b1f61f5236508662",
+            "uuid": "933f334536274e58a6d2e083aa7782d9"
+          }
+        ],
+        [
+          "LED 12V",
+          1,
+          "HEADER 2X4",
+          "H5",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "f1114531b0064557a5b5650e45c35cec",
+            "uuid": "9804c13a30734d1395f2bbf191dc2bee"
+          }
+        ],
+        [
+          "IRL3803PBF",
+          3,
+          "TO-220F-3_L10.2-W4.9-P2.54-L",
+          "Q1,Q2,Q3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C520677",
+            "BOM_Manufacturer": "Infineon(英飞凌)",
+            "BOM_Manufacturer Part": "IRL3803PBF",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "b1c0dd698913434f8213e3b0c8fb2603",
+            "uuid": "54bdeb8fabd04f0e96c51848222cac3b"
+          }
+        ],
+        [
+          "200Ω",
+          3,
+          "RES-TH_BD2.2-L6.5-P10.50-D0.6",
+          "R3,R4,R5",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C385470",
+            "BOM_Manufacturer": "Tyohm(幸亚电阻)",
+            "BOM_Manufacturer Part": "RN1/2WS200ΩFT/BA1",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "666264fd42b84465ad050a9517cab8cf",
+            "uuid": "6558d09a8117429b94fac100fa304c4f"
+          }
+        ]
+      ],
+      "updateTime": 1672790660,
+      "createTime": 1672730444,
+      "histories": [],
+      "created_at": "2023-01-03 20:20:44",
+      "updated_at": "2023-01-04 13:04:20"
+    },
+    {
+      "uuid": "5ae66b86144370964c0ef2d6cc13b105",
+      "puuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+      "title": "PCB_LEDStripController",
+      "filename": "PCB_LEDStripController.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "89f5280378144b629de4998ef974b6b8": 1,
+        "e6b180e1316a4d0690f78b72797504c2": 1,
+        "64f3f8ba6f7a4b82b1f61f5236508662": 1,
+        "f61a147dfed94ddc90120bd8aeab9399": 1,
+        "9ea59130ae074fa3abe27de8cbf71d91": 2,
+        "666264fd42b84465ad050a9517cab8cf": 3,
+        "6cdda41777024086945d62a5a913685c": 1,
+        "f1114531b0064557a5b5650e45c35cec": 1,
+        "b1c0dd698913434f8213e3b0c8fb2603": 3
+      },
+      "BOM": [],
+      "updateTime": 1672790852,
+      "createTime": 1672780346,
+      "histories": [],
+      "created_at": "2023-01-04 10:12:26",
+      "updated_at": "2023-01-04 13:07:32"
+    }
+  ],
+  "sort": [],
+  "title": "LEDStripController",
+  "foldername": "LEDStripController",
+  "schfilename": "LEDStripController.json",
+  "schfilemtime": 1672790660297
+}

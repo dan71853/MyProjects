@@ -1,0 +1,62 @@
+{
+  "uuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+  "path": "Offline/LEDStripController",
+  "name": "LEDStripController",
+  "content": "",
+  "created_at": "2023-01-03 20:20:43",
+  "updated_at": "2023-01-03 21:55:32",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a99c40a24c75534f5220a43c4ec720e5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "71beb3457dbdd1caeb0b78023e46503a",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "9ac371982ef04968a90d675bd78095e2": 1,
+        "1bb6621b343e4c238e883be123ccaa79": 1,
+        "933f334536274e58a6d2e083aa7782d9": 1,
+        "f79779be03f74ef6a7a1e93164160497": 1,
+        "bef7e5266fe34b5d86937eb89fe2d2f4": 2,
+        "6558d09a8117429b94fac100fa304c4f": 3
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "200Ω",
+          3,
+          "RES-TH_BD2.2-L6.5-P10.50-D0.6",
+          "R3,R4,R5",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C385470",
+            "BOM_Manufacturer": "Tyohm(幸亚电阻)",
+            "BOM_Manufacturer Part": "RN1/2WS200ΩFT/BA1",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "666264fd42b84465ad050a9517cab8cf",
+            "uuid": "6558d09a8117429b94fac100fa304c4f"
+          }
+        ]
+      ],
+      "updateTime": 1672736132,
+      "createTime": 1672730444,
+      "histories": [],
+      "created_at": "2023-01-03 20:20:44",
+      "updated_at": "2023-01-03 21:55:32"
+    }
+  ],
+  "sort": [],
+  "title": "LEDStripController",
+  "foldername": "LEDStripController",
+  "schfilename": "LEDStripController.json",
+  "schfilemtime": 1672736132384
+}

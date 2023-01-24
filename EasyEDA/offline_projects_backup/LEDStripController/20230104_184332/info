@@ -1,0 +1,198 @@
+{
+  "uuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+  "path": "Offline/LEDStripController",
+  "name": "LEDStripController",
+  "content": "",
+  "created_at": "2023-01-03 20:20:43",
+  "updated_at": "2023-01-04 18:43:32",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a99c40a24c75534f5220a43c4ec720e5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "9ac371982ef04968a90d675bd78095e2": 1,
+        "1bb6621b343e4c238e883be123ccaa79": 1,
+        "933f334536274e58a6d2e083aa7782d9": 1,
+        "54bdeb8fabd04f0e96c51848222cac3b": 3,
+        "64752082718c4c8c9de1f63fde7f74df": 1,
+        "7cd3b87da4084cedb26dcbfedb044df2": 1,
+        "d30646d91a204e2ea6edd2f171ce2ac7": 8,
+        "9804c13a30734d1395f2bbf191dc2bee": 1,
+        "6843dbaf1b77486c8b0a4a7b35008832": 1,
+        "f79779be03f74ef6a7a1e93164160497": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "6.8uF",
+          1,
+          "CAP-TH_BD8.0-P3.50-D0.6-FD",
+          "C1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C525458",
+            "BOM_Manufacturer": "Yunxing(云星)",
+            "BOM_Manufacturer Part": "ECE2GM6R8F14OTPO",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "90d1b58a2d284d63b5d026a0c4e38bab",
+            "uuid": "6843dbaf1b77486c8b0a4a7b35008832"
+          }
+        ],
+        [
+          "Head",
+          1,
+          "HEADER 1X6",
+          "H3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "64f3f8ba6f7a4b82b1f61f5236508662",
+            "uuid": "933f334536274e58a6d2e083aa7782d9"
+          }
+        ],
+        [
+          "LED 12V",
+          1,
+          "HEADER 2X4",
+          "H5",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "f1114531b0064557a5b5650e45c35cec",
+            "uuid": "9804c13a30734d1395f2bbf191dc2bee"
+          }
+        ],
+        [
+          "IRL3803PBF",
+          3,
+          "TO-220F-3_L10.2-W4.9-P2.54-L",
+          "Q1,Q2,Q3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C520677",
+            "BOM_Manufacturer": "Infineon(英飞凌)",
+            "BOM_Manufacturer Part": "IRL3803PBF",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "b1c0dd698913434f8213e3b0c8fb2603",
+            "uuid": "54bdeb8fabd04f0e96c51848222cac3b"
+          }
+        ],
+        [
+          "220R",
+          6,
+          "RESISTOR BASIC",
+          "R1,R2,R3,R4,R5,R6",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C385470",
+            "BOM_Manufacturer": "Tyohm(幸亚电阻)",
+            "BOM_Manufacturer Part": "RN1/2WS200ΩFT/BA1",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "b0e8bc4cf0de4cfa9dbc0fbbbeb9f0a6",
+            "uuid": "d30646d91a204e2ea6edd2f171ce2ac7"
+          }
+        ],
+        [
+          "1K",
+          2,
+          "RESISTOR BASIC",
+          "R7,R8",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C385470",
+            "BOM_Manufacturer": "Tyohm(幸亚电阻)",
+            "BOM_Manufacturer Part": "RN1/2WS200ΩFT/BA1",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "b0e8bc4cf0de4cfa9dbc0fbbbeb9f0a6",
+            "uuid": "d30646d91a204e2ea6edd2f171ce2ac7"
+          }
+        ],
+        [
+          "NODEMCU-32S",
+          1,
+          "NODEMCU-32S",
+          "U1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C111436",
+            "BOM_Manufacturer": "Ai-Thinker(安信可)",
+            "BOM_Manufacturer Part": "NodeMCU-32SLua",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "1198eaac7ac14e09b6cdb1594d57e902",
+            "uuid": "7cd3b87da4084cedb26dcbfedb044df2"
+          }
+        ],
+        [
+          "12V DC",
+          1,
+          "DC-IN-TH_POWER-JACK",
+          "U2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C9900001795",
+            "BOM_Manufacturer": "null",
+            "BOM_Manufacturer Part": "POWER-JACK",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "c309f5d2eb8e40b796181119d447a76e",
+            "uuid": "64752082718c4c8c9de1f63fde7f74df"
+          }
+        ]
+      ],
+      "updateTime": 1672810926,
+      "createTime": 1672730444,
+      "histories": [],
+      "created_at": "2023-01-03 20:20:44",
+      "updated_at": "2023-01-04 18:42:06"
+    },
+    {
+      "uuid": "5ae66b86144370964c0ef2d6cc13b105",
+      "puuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+      "title": "PCB_LEDStripController",
+      "filename": "PCB_LEDStripController.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "b0e8bc4cf0de4cfa9dbc0fbbbeb9f0a6": 8,
+        "64f3f8ba6f7a4b82b1f61f5236508662": 1,
+        "c309f5d2eb8e40b796181119d447a76e": 1,
+        "1198eaac7ac14e09b6cdb1594d57e902": 1,
+        "89f5280378144b629de4998ef974b6b8": 1,
+        "e6b180e1316a4d0690f78b72797504c2": 1,
+        "f61a147dfed94ddc90120bd8aeab9399": 1,
+        "b1c0dd698913434f8213e3b0c8fb2603": 3,
+        "f1114531b0064557a5b5650e45c35cec": 1,
+        "90d1b58a2d284d63b5d026a0c4e38bab": 1
+      },
+      "BOM": [],
+      "updateTime": 1672811012,
+      "createTime": 1672780346,
+      "histories": [],
+      "created_at": "2023-01-04 10:12:26",
+      "updated_at": "2023-01-04 18:43:32"
+    }
+  ],
+  "sort": [],
+  "title": "LEDStripController",
+  "foldername": "LEDStripController",
+  "schfilename": "LEDStripController.json",
+  "schfilemtime": 1672810926672
+}

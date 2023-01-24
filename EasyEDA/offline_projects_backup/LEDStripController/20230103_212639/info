@@ -1,0 +1,46 @@
+{
+  "uuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+  "path": "Offline/LEDStripController",
+  "name": "LEDStripController",
+  "content": "",
+  "created_at": "2023-01-03 20:20:43",
+  "updated_at": "2023-01-03 21:26:39",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a99c40a24c75534f5220a43c4ec720e5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "8d3626db522eaee90cb245b2b8fce949",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "9ac371982ef04968a90d675bd78095e2": 1,
+        "1bb6621b343e4c238e883be123ccaa79": 1,
+        "933f334536274e58a6d2e083aa7782d9": 1,
+        "f79779be03f74ef6a7a1e93164160497": 1,
+        "bef7e5266fe34b5d86937eb89fe2d2f4": 2
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ]
+      ],
+      "updateTime": 1672734399,
+      "createTime": 1672730444,
+      "histories": [],
+      "created_at": "2023-01-03 20:20:44",
+      "updated_at": "2023-01-03 21:26:39"
+    }
+  ],
+  "sort": [],
+  "title": "LEDStripController",
+  "foldername": "LEDStripController",
+  "schfilename": "LEDStripController.json",
+  "schfilemtime": 1672734399525
+}

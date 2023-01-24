@@ -1,0 +1,135 @@
+{
+  "uuid": "d21f520c4a0ee1cb49d9b49fee75238a",
+  "path": "Offline/LEDStripController",
+  "name": "LEDStripController",
+  "content": "",
+  "created_at": "2023-01-03 20:20:43",
+  "updated_at": "2023-01-03 21:17:51",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "a99c40a24c75534f5220a43c4ec720e5",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "beb1534103aaf0a7701eb22062292580",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "5f17bba28bd34c0e8919c3d8e11b9aea": 1,
+        "9ac371982ef04968a90d675bd78095e2": 1,
+        "1bb6621b343e4c238e883be123ccaa79": 1,
+        "933f334536274e58a6d2e083aa7782d9": 1,
+        "f79779be03f74ef6a7a1e93164160497": 1,
+        "bef7e5266fe34b5d86937eb89fe2d2f4": 2
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "POT",
+          1,
+          "HDR-TH_4P-P2.54-V-M",
+          "H1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "89f5280378144b629de4998ef974b6b8",
+            "uuid": "9ac371982ef04968a90d675bd78095e2"
+          }
+        ],
+        [
+          "Switch",
+          1,
+          "HDR-TH_2P-P2.54-V-M",
+          "H2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C920781",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1102G0S116C001",
+            "puuid": "e6b180e1316a4d0690f78b72797504c2",
+            "uuid": "1bb6621b343e4c238e883be123ccaa79"
+          }
+        ],
+        [
+          "Head_LED_Switch",
+          1,
+          "HDR-TH_4P-P2.54-V-M",
+          "H3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "89f5280378144b629de4998ef974b6b8",
+            "uuid": "933f334536274e58a6d2e083aa7782d9"
+          }
+        ],
+        [
+          "I2C_3V3",
+          1,
+          "HEADER 1X3",
+          "H4",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C721444",
+            "BOM_Manufacturer": "Wcon(维峰电子)",
+            "BOM_Manufacturer Part": "1125-1104G0S118C005",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "f61a147dfed94ddc90120bd8aeab9399",
+            "uuid": "f79779be03f74ef6a7a1e93164160497"
+          }
+        ],
+        [
+          "1kΩ",
+          2,
+          "RES-TH_BD2.3-L6.5-P10.50-D0.5",
+          "R1,R2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C120055",
+            "BOM_Manufacturer": "CCO(千志电子)",
+            "BOM_Manufacturer Part": "CF1/4W-1KΩ±5% T",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "9ea59130ae074fa3abe27de8cbf71d91",
+            "uuid": "bef7e5266fe34b5d86937eb89fe2d2f4"
+          }
+        ],
+        [
+          "NODEMCU-32SLUA",
+          1,
+          "COMM-TH_NODEMCU-32SLUA",
+          "U1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C111436",
+            "BOM_Manufacturer": "Ai-Thinker(安信可)",
+            "BOM_Manufacturer Part": "NodeMCU-32SLua",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "6cdda41777024086945d62a5a913685c",
+            "uuid": "5f17bba28bd34c0e8919c3d8e11b9aea"
+          }
+        ]
+      ],
+      "updateTime": 1672733871,
+      "createTime": 1672730444,
+      "histories": [],
+      "created_at": "2023-01-03 20:20:44",
+      "updated_at": "2023-01-03 21:17:51"
+    }
+  ],
+  "sort": [],
+  "title": "LEDStripController",
+  "foldername": "LEDStripController",
+  "schfilename": "LEDStripController.json",
+  "schfilemtime": 1672733871217
+}
