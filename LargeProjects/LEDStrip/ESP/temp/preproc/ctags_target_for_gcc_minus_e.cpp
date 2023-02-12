@@ -3,97 +3,59 @@
 # 2 "c:\\Users\\somme\\Documents\\Git\\MyProjects\\LargeProjects\\LEDStrip\\ESP\\LEDStrip.ino" 2
 
 // https://esphome.io/devices/nodemcu_esp32.html
-const uint8_t LED_R = 14;
-const uint8_t LED_G = 13;
-const uint8_t LED_B = 5;
 const uint8_t PWM_CH_R = 0;
 const uint8_t PWM_CH_G = 1;
 const uint8_t PWM_CH_B = 2;
-const uint8_t LED_R_HEAD = 27;
-const uint8_t LED_G_HEAD = 26;
-const uint8_t LED_B_HEAD = 25;
 const uint8_t PWM_CH_R_HEAD = 3;
 const uint8_t PWM_CH_G_HEAD = 4;
 const uint8_t PWM_CH_B_HEAD = 5;
-const uint8_t S1 = 33; // Head- latching
-const uint8_t S2 = 0; // Momentary
-const uint8_t S3 = 35; // Potswitch
 
-int red, green, blue; // red, green and blue values
-unsigned long timer = millis();
+const uint8_t LED_R = 17;
+const uint8_t LED_G = 16;
+const uint8_t LED_B = 18;
+const uint8_t LED_R_HEAD = 27;
+const uint8_t LED_G_HEAD = 26;
+const uint8_t LED_B_HEAD = 25;
+const uint8_t headSwitch = 33; // Head- latching
+const uint8_t button = 19; // Momentary
+const uint8_t potSwitch = 35; // Potswitch
+const uint8_t potValue = 32;
+
+enum states { LIGHTS_ON,
+              LIGHTS_OFF,
+              M_MODE_1,
+              M_MODE_2,
+              M_MODE_3 };
+
+states currentState = LIGHTS_ON;
+bool stateChange = true;
+unsigned long serialTimeoutTimer = millis();
+
 const int freq = 8000;
 const int resolution = 8;
 
-boolean lightsOn = true;
-boolean manualMode = false;
-boolean headLightsMatch = false;
+bool headMatchMain = false;
+bool buttonPressed = false;
 
-boolean manualModeChanged = false;
-boolean modeChanged = false;
-boolean headLightsMatchChange = false;
-boolean lightsOnChanged = false;
 unsigned long debouncingTimer = millis();
-boolean debouncingTimerStarted = false;
+// TODO: remove
 
-uint8_t mode = 0;
-uint8_t numberOfModes = 2;
-
-void __attribute__((section(".iram1" "." "27"))) s1Pressed() {
-    ;
-    if (digitalRead(S1)) {
-        lightsOn = true;
-    } else {
-        lightsOn = false;
-    }
-    lightsOnChanged = true;
-    debouncingTimer = millis();
-    debouncingTimerStarted = true;
-}
-
-void __attribute__((section(".iram1" "." "28"))) s2Pressed() {
+void __attribute__((section(".iram1" "." "27"))) buttonInterrupt() {
     ;
 
-    if (manualMode) {
-        mode++;
-        if (mode >= numberOfModes) {
-            mode = 0;
-        }
-        modeChanged = true;
-    } else {
-        headLightsMatch = !headLightsMatch;
-        if (!headLightsMatch) {
-            s1Pressed();
-        }
-        headLightsMatchChange = true;
+    if (millis() - debouncingTimer > 50) {
+        buttonPressed = true;
+        debouncingTimer = millis();
     }
-
-    debouncingTimer = millis();
-    debouncingTimerStarted = true;
-}
-
-void __attribute__((section(".iram1" "." "29"))) s3Pressed() {
     ;
-
-    if (digitalRead(S3)) {
-        manualMode = false;
-    } else {
-        manualMode = true;
-        mode = 0;
-    }
-    manualModeChanged = true;
-    debouncingTimer = millis();
-    debouncingTimerStarted = true;
 }
 
 void setup() {
     Serial.begin(9600);
-    // initial values (no significance)
-    int red = 0;
-    int blue = 0;
-    int green = 0;
 
     analogWriteFrequency(freq); // Set the PWM frequency
 
+    // Setup main LED PWM
     ledcSetup(PWM_CH_R, freq, resolution);
     ledcAttachPin(LED_R, PWM_CH_R);
     ledcSetup(PWM_CH_G, freq, resolution);
@@ -101,141 +63,190 @@ void setup() {
     ledcSetup(PWM_CH_B, freq, resolution);
     ledcAttachPin(LED_B, PWM_CH_B);
 
+    // Setup head LED PWM
     ledcSetup(PWM_CH_R_HEAD, freq, resolution);
     ledcAttachPin(LED_R_HEAD, PWM_CH_R_HEAD);
     ledcSetup(PWM_CH_G_HEAD, freq, resolution);
     ledcAttachPin(LED_G_HEAD, PWM_CH_G_HEAD);
     ledcSetup(PWM_CH_B_HEAD, freq, resolution);
     ledcAttachPin(LED_B_HEAD, PWM_CH_B_HEAD);
-    headLightsOn();
 
-    pinMode(S1, 0x05);
-    attachInterrupt(S1, s1Pressed, 0x03);
-    pinMode(S2, 0x05);
-    attachInterrupt(S2, s2Pressed, 0x02);
-    pinMode(S3, 0x05);
-    attachInterrupt(S3, s3Pressed, 0x03);
+    // Setup buttons and enable interrupt for momentary button
+    pinMode(headSwitch, 0x05);
+    pinMode(button, 0x05);
+    attachInterrupt(button, buttonInterrupt, 0x02);
+    pinMode(potSwitch, 0x05);
 
+    // Turn all lights off
     ledcWrite(PWM_CH_R, 0);
-    ledcWrite(PWM_CH_G, 255);
+    ledcWrite(PWM_CH_G, 0);
     ledcWrite(PWM_CH_B, 0);
-}
-
-// Orange colour for eyes
-void headLightsOff() {
-    ledcWrite(PWM_CH_R_HEAD, 0x00);
-    ledcWrite(PWM_CH_G_HEAD, 0x00);
-    ledcWrite(PWM_CH_B_HEAD, 0x00);
-}
-
-void headLightsOn() {
-    ledcWrite(PWM_CH_R_HEAD, 0x50);
-    ledcWrite(PWM_CH_G_HEAD, 0x80);
-    ledcWrite(PWM_CH_B_HEAD, 0x00);
-
-    if (ledcRead(PWM_CH_R_HEAD) != 0x50)
-        ledcWrite(PWM_CH_R_HEAD, 0x50);
-
-    if (ledcRead(PWM_CH_G_HEAD) != 0x80)
-        ledcWrite(PWM_CH_G_HEAD, 0x80);
-
-    if (ledcRead(PWM_CH_B_HEAD) != 0x00)
-        ledcWrite(PWM_CH_B_HEAD, 0x00);
+    ledcWrite(PWM_CH_R_HEAD, 0);
+    ledcWrite(PWM_CH_G_HEAD, 0);
+    ledcWrite(PWM_CH_B_HEAD, 0);
 }
 
 void loop() {
-    if (debouncingTimerStarted && millis() - debouncingTimer > 800) {
-        debouncingTimerStarted = false;
-        ;
-    }
-    if (manualModeChanged) {
-        Serial.println("manualMode");
-        Serial.println(manualMode);
-        manualModeChanged = false;
-    }
-    if (modeChanged) {
-        Serial.println("mode");
-        Serial.println(mode);
-        modeChanged = false;
-    }
-    if (headLightsMatchChange) {
-        Serial.println("headLightsMatch");
-        Serial.println(headLightsMatch);
-        headLightsMatchChange = false;
-    }
-    if (lightsOnChanged) {
-        Serial.println("lightsOn");
-        Serial.println(lightsOn);
-        if (lightsOn) {
-            headLightsOn();
-        } else {
-            headLightsOff();
-        }
-        lightsOnChanged = false;
-    }
-
-    if (!lightsOn) {
-        return;
-    }
-
-    if (manualMode) {
-        switch (mode) {
-            case 0:
-                // Mode 0, all LEDs on
-                red = 0xFF;
-                green = 0xFF;
-                blue = 0xFF;
-                break;
-            case 1:
-                // Mode 1, Blue light
-                red = 0x00;
-                green = 0x50;
-                blue = 0xA0;
-                break;
-            default:
-                break;
-        }
-
-        ledcWrite(PWM_CH_R, red);
-        ledcWrite(PWM_CH_G, green);
-        ledcWrite(PWM_CH_B, blue);
-
-        if (headLightsMatch) {
-            ledcWrite(PWM_CH_R_HEAD, red);
-            ledcWrite(PWM_CH_G_HEAD, green);
-            ledcWrite(PWM_CH_B_HEAD, blue);
-        }
-    } else {
-        // protocol expects data in format of 4 bytes
-        //(xff) as a marker to ensure proper synchronization always
-        // followed by red, green, blue bytes
-        if (Serial.available() >= 4) {
-            timer = millis();
-            if (Serial.read() == 0xff) {
-                red = (Serial.read());
-                green = (Serial.read());
-                blue = (Serial.read());
+    switch (currentState) {
+        case LIGHTS_ON: {
+            if (stateChange) {
+                stateChange = false;
             }
-        }
-        if (millis() - timer > 10000) {
-            red = 0;
-            green = 0;
-            blue = 0;
-        }
+            if (!digitalRead(headSwitch)) {
+                currentState = LIGHTS_OFF;
+                stateChange = true;
+            }
 
-        // finally control led brightness through pulse-width modulation
-        ledcWrite(PWM_CH_R, red);
-        ledcWrite(PWM_CH_G, green);
-        ledcWrite(PWM_CH_B, blue);
+            if (digitalRead(potSwitch)) {
+                currentState = M_MODE_1;
+                stateChange = true;
+            }
 
-        if (headLightsMatch) {
-            ledcWrite(PWM_CH_R_HEAD, red);
-            ledcWrite(PWM_CH_G_HEAD, green);
-            ledcWrite(PWM_CH_B_HEAD, blue);
+            if (buttonPressed) {
+                headMatchMain = !headMatchMain; // Toggle the head lights state
+                buttonPressed = false;
+                if (!headMatchMain) { // Set to default orange colour
+                    ledcWrite(PWM_CH_R_HEAD, 0x50);
+                    ledcWrite(PWM_CH_G_HEAD, 0x80);
+                    ledcWrite(PWM_CH_B_HEAD, 0x00);
+                }
+            }
+
+            uint8_t red, green, blue; // Temp Colour values
+            if (Serial.available() >= 4) { // If there is data in the serial buffer then read
+                serialTimeoutTimer = millis(); // Reset the timeout timer
+                if (Serial.read() == 0xff) { // Start of message
+                    red = (Serial.read()); // Read colour values
+                    green = (Serial.read());
+                    blue = (Serial.read());
+                }
+            }
+            if (millis() - serialTimeoutTimer > 10000) { // If no serial data for 10 seconds then turn off lights
+                red = 0;
+                green = 0;
+                blue = 0;
+                delay(1000);
+            }
+
+            ledcWrite(PWM_CH_R, red);
+            ledcWrite(PWM_CH_G, green);
+            ledcWrite(PWM_CH_B, blue);
+
+            if (headMatchMain) {
+                ledcWrite(PWM_CH_R_HEAD, red);
+                ledcWrite(PWM_CH_G_HEAD, green);
+                ledcWrite(PWM_CH_B_HEAD, blue);
+            }
+            break;
         }
-        // ledcWrite(PWM_CH_R_HEAD, 0x66);
-        // ledcWrite(PWM_CH_G_HEAD, 0x80);
-        // ledcWrite(PWM_CH_B_HEAD, 0x00);
-        delay(10); // just to be safe
+        case LIGHTS_OFF: { // Could add sleep?
+            if (stateChange) {
+                ledcWrite(PWM_CH_R, 0x00);
+                ledcWrite(PWM_CH_G, 0x00);
+                ledcWrite(PWM_CH_B, 0x00);
+                ledcWrite(PWM_CH_R_HEAD, 0x00);
+                ledcWrite(PWM_CH_G_HEAD, 0x00);
+                ledcWrite(PWM_CH_B_HEAD, 0x00);
+                stateChange = false;
+            }
+            if (digitalRead(headSwitch)) {
+                currentState = LIGHTS_ON;
+                stateChange = true;
+            }
+            if (buttonPressed) {
+                buttonPressed = false;
+            }
+            delay(1000);
+
+            break;
+        }
+        case M_MODE_1: {
+            if (stateChange) {
+                stateChange = false;
+            }
+            if (!digitalRead(headSwitch)) {
+                currentState = LIGHTS_OFF;
+                stateChange = true;
+            }
+            if (!digitalRead(potSwitch)) {
+                currentState = LIGHTS_ON;
+                stateChange = true;
+            }
+            if (buttonPressed) {
+                currentState = M_MODE_2;
+                buttonPressed = false;
+            }
+            uint8_t brightness = analogRead(potValue) / 16;
+
+            ledcWrite(PWM_CH_R, brightness);
+            ledcWrite(PWM_CH_G, brightness);
+            ledcWrite(PWM_CH_B, brightness);
+            if (headMatchMain) {
+                ledcWrite(PWM_CH_R_HEAD, brightness);
+                ledcWrite(PWM_CH_G_HEAD, brightness);
+                ledcWrite(PWM_CH_B_HEAD, brightness);
+            }
+
+            delay(500);
+            break;
+        }
+        case M_MODE_2: {
+            if (stateChange) {
+                ledcWrite(PWM_CH_R, 0x50);
+                ledcWrite(PWM_CH_G, 0x80);
+                ledcWrite(PWM_CH_B, 0x00);
+                if (headMatchMain) {
+                    ledcWrite(PWM_CH_R_HEAD, 0x50);
+                    ledcWrite(PWM_CH_G_HEAD, 0x80);
+                    ledcWrite(PWM_CH_B_HEAD, 0x00);
+                }
+                stateChange = false;
+            }
+            if (!digitalRead(headSwitch)) {
+                currentState = LIGHTS_OFF;
+                stateChange = true;
+            }
+            if (!digitalRead(potSwitch)) {
+                currentState = LIGHTS_ON;
+                stateChange = true;
+            }
+            if (buttonPressed) {
+                currentState = M_MODE_3;
+                buttonPressed = false;
+            }
+            break;
+        }
+        case M_MODE_3: { // 9010dd
+
+            if (stateChange) {
+                ledcWrite(PWM_CH_R, 0x90);
+                ledcWrite(PWM_CH_G, 0x10);
+                ledcWrite(PWM_CH_B, 0xDD);
+                if (headMatchMain) {
+                    ledcWrite(PWM_CH_R_HEAD, 0x90);
+                    ledcWrite(PWM_CH_G_HEAD, 0x10);
+                    ledcWrite(PWM_CH_B_HEAD, 0xDD);
+                }
+                stateChange = false;
+            }
+            if (!digitalRead(headSwitch)) {
+                currentState = LIGHTS_OFF;
+                stateChange = true;
+            }
+            if (!digitalRead(potSwitch)) {
+                currentState = LIGHTS_ON;
+                stateChange = true;
+            }
+            if (buttonPressed) {
+                currentState = M_MODE_1;
+                buttonPressed = false;
+            }
+            break;
+        }
+        default: {
+            delay(1000);
+            Serial.println("State Error");
+            break;
+        }
     }
 }

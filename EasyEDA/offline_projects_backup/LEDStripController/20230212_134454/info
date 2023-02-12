@@ -4,7 +4,7 @@
   "name": "LEDStripController",
   "content": "",
   "created_at": "2023-01-03 20:20:43",
-  "updated_at": "2023-02-12 13:46:41",
+  "updated_at": "2023-02-12 13:44:54",
   "stick": "",
   "documents": [
     {
@@ -200,11 +200,11 @@
         "90d1b58a2d284d63b5d026a0c4e38bab": 1
       },
       "BOM": [],
-      "updateTime": 1676162801,
+      "updateTime": 1676162694,
       "createTime": 1672780346,
       "histories": [],
       "created_at": "2023-01-04 10:12:26",
-      "updated_at": "2023-02-12 13:46:41"
+      "updated_at": "2023-02-12 13:44:54"
     }
   ],
   "sort": [],
