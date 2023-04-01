@@ -31,8 +31,7 @@ unsigned long serialTimeoutTimer = millis();
 
 const int freq = 8000;
 const int resolution = 8;
-
-bool headMatchMain = false;
+delay after state change bool headMatchMain = false;
 bool buttonPressed = false;
 
 unsigned long debouncingTimer = millis();
