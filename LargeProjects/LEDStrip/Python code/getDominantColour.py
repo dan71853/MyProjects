@@ -1,9 +1,7 @@
-import random
+import pyscreenshot as ImageGrab
+from PIL import Image
 import time
 import serial
-import PIL.ImageGrab as ImageGrab
-import numpy as np
-
 # configure serial port
 ser = serial.Serial('COM3', 9600)  # replace 'COM3' with your serial port name
 
@@ -15,33 +13,23 @@ rect_top = (screen_height - rect_height) // 2
 rect_right = rect_left + rect_width
 rect_bottom = rect_top + rect_height
 
-
-
 while True:
+    # Grab a screenshot of the entire screen
+    im = ImageGrab.grab()
 
 
-    # start_time = time.time()
+    # Crop the screenshot to the rectangle
+    im_crop = im.crop((rect_left, rect_top, rect_right, rect_bottom))
 
-    # Capture the screenshot and crop the rectangle
-    screenshot = ImageGrab.grab()
-    cropped_screenshot = screenshot.crop((rect_left, rect_top, rect_right, rect_bottom))
-
-    # Convert the cropped screenshot to a NumPy array
-    np_array = np.array(cropped_screenshot)
-
-    # Calculate the average color of the rectangle
-    avg_color = np.mean(np_array, axis=(0, 1)).astype(int)
-
-   
-    
-    
+    # Get the most common color in the cropped image
+    colors = im_crop.getcolors(im_crop.size[0] * im_crop.size[1])
+    most_common_color = max(colors, key=lambda x: x[0])[1]
 
     # pack RGB values and trailing byte into a byte string
-    data = bytes([avg_color[0], avg_color[1], avg_color[2], 0xff])
-    
+    data = bytes([0xff,most_common_color[0], most_common_color[1], most_common_color[2]])
+
     # send data to serial port
     ser.write(data)
-    
+
     # wait for 500ms before sending next data
     time.sleep(0.2)
- 
