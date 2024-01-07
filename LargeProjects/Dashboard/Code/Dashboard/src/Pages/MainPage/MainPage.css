@@ -1,0 +1,9 @@
+.main-page {
+    height: 85%;
+    width: 100%;
+    background-color: #272233;
+}
+
+.main-page h1 {
+    text-align: center;
+}
