@@ -4,30 +4,26 @@ import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import { timerButtons } from '../Pages/TimerPage/TimerPageButtons';
 
-interface MenuObject {
-  [key: string]: (JSX.Element | null)[][];
-}
-
-export const handleButtonClick = (path: string, navigate: Function, setCurrentSet: Function) => {
-  if (path.startsWith("/")) {
-    navigate(path);
-  } else {
-    setCurrentSet(path);
-  }
-};
-
 const NavBar: React.FC = () => {
-  const navigate = useNavigate();
   const [currentSet, setCurrentSet] = useState("mainMain");
+  const navigate = useNavigate();
 
-  const menus: MenuObject = {
+  const handleButtonClick = (path: string) => {
+    if (path.startsWith("/")) {
+      navigate(path);
+    } else {
+      setCurrentSet(path);
+    }
+  };
+
+  const menus: { [key: string]: Array<React.ReactNode | null> } = {
     mainMain: [
-      <button key="timer" onClick={() => handleButtonClick("/timer")}>Timer</button>,
+      <NavBarButton displayText='Main menu' path='/' onClick={() => handleButtonClick('/')} />,
       null,
-      <button key="home" onClick={() => handleButtonClick("/")}>Home</button>,
+      <NavBarButton displayText='Timer page' path='/timer' onClick={() => handleButtonClick('/timer')} />,
       null,
-      <button key="customButtonA" onClick={() => handleButtonClick("mainSub1")}>AAAAAAA</button>,
-      <button key="customButtonB" onClick={() => console.log("BBBB")}>BBBBB</button>,
+      <NavBarButton displayText='mainSub1' path='mainSub1' onClick={() => handleButtonClick('mainSub1')} />,
+      <NavBarButton displayText='mainSub2' path='mainSub2' onClick={() => handleButtonClick('mainSub2')} />,
       null,
       null,
     ],
@@ -39,19 +35,9 @@ const NavBar: React.FC = () => {
       null,
       null,
       null,
-      <button key="back1" onClick={() => handleButtonClick("mainMain")}>Back</button>,
+      <NavBarButton displayText='Back' path='mainMain' onClick={() => handleButtonClick('mainMain')} />,
     ],
-    timerMain: [...timerButtons],
-    // ... add other pages as needed
   };
-
-  // const handleButtonClick = (path: string) => {
-  //   if (path.startsWith("/")) {
-  //     navigate(path);
-  //   } else {
-  //     setCurrentSet(path);
-  //   }
-  // };
 
   const buttons = menus[currentSet];
 
@@ -65,6 +51,16 @@ const NavBar: React.FC = () => {
       ))}
     </div>
   );
+};
+
+export const NavBarButton: React.FC<{ path?: string; displayText?: string; onClick?: () => void }> = ({ path, displayText, onClick }) => {
+  if (path) {
+    return (
+      <button onClick={onClick}>{displayText}</button>
+    );
+  } else {
+    return (null);
+  }
 };
 
 export default NavBar;
