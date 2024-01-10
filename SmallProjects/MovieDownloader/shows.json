@@ -6,13 +6,19 @@
         "episode_number": 13
     },
     {
+        "enabled": true,
+        "show_name": "Mashle",
+        "season_number": 2,
+        "episode_number": 2
+    },
+    {
         "enabled": false,
         "show_name": "Call of the night",
         "season_number": 1,
         "episode_number": 2
     },
     {
-        "enabled": true,
+        "enabled": false,
         "show_name": "Fate Zero",
         "season_number": 1,
         "episode_number": 1
@@ -24,10 +30,10 @@
         "episode_number": 10
     },
     {
-        "enabled": true,
+        "enabled": false,
         "show_name": "Kingdoms of Ruin",
         "season_number": 1,
-        "episode_number": 10
+        "episode_number": 11
     },
     {
         "enabled": false,
@@ -45,7 +51,7 @@
         "enabled": true,
         "show_name": "Frieren",
         "season_number": 1,
-        "episode_number": 17
+        "episode_number": 18
     },
     {
         "enabled": true,
@@ -63,7 +69,7 @@
         "enabled": true,
         "show_name": "Jujutsu kaisen",
         "season_number": 2,
-        "episode_number": 23
+        "episode_number": 24
     },
     {
         "enabled": false,
@@ -75,7 +81,7 @@
         "enabled": true,
         "show_name": "one piece",
         "season_number": 0,
-        "episode_number": 1089
+        "episode_number": 1090
     },
     {
         "enabled": false,
