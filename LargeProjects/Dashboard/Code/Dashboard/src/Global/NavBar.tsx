@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
-import { timerButtons } from '../Pages/TimerPage/TimerPageButtons';
+
+import {useEvent, useList} from 'react-use';
+
 
 const NavBar: React.FC = () => {
   const [currentSet, setCurrentSet] = useState("mainMain");
@@ -16,6 +18,7 @@ const NavBar: React.FC = () => {
     }
   };
 
+
   const menus: { [key: string]: Array<React.ReactNode | null> } = {
     mainMain: [
       <NavBarButton displayText='Main menu' path='/' onClick={() => handleButtonClick('/')} />,
@@ -25,7 +28,7 @@ const NavBar: React.FC = () => {
       <NavBarButton displayText='mainSub1' path='mainSub1' onClick={() => handleButtonClick('mainSub1')} />,
       <NavBarButton displayText='mainSub2' path='mainSub2' onClick={() => handleButtonClick('mainSub2')} />,
       null,
-      null,
+      <NavBarButton displayText='Increment counter' path='mainMain' onClick={() => {console.log("AAAAA")}} />,
     ],
     mainSub1: [
       null,
