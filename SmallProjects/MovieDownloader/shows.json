@@ -1,5 +1,47 @@
 [
     {
+        "enabled": true,
+        "show_name": "Chiyu Mahou no Machigatta Tsukaikata",
+        "season_number": 1,
+        "episode_number": 6
+    },
+    {
+        "enabled": true,
+        "show_name": "Delicious in Dungeon",
+        "season_number": 1,
+        "episode_number": 6
+    },
+    {
+        "enabled": false,
+        "show_name": "Banished from the Hero's Party",
+        "season_number": 1,
+        "episode_number": 1
+    },
+    {
+        "enabled": true,
+        "show_name": "Metallic Rouge",
+        "season_number": 1,
+        "episode_number": 1
+    },
+    {
+        "enabled": false,
+        "show_name": "Undead Unluck ",
+        "season_number": 1,
+        "episode_number": 2
+    },
+    {
+        "enabled": true,
+        "show_name": "Shangri-La Frontier",
+        "season_number": 1,
+        "episode_number": 18
+    },
+    {
+        "enabled": true,
+        "show_name": "Unwanted Undead Adventurer",
+        "season_number": 1,
+        "episode_number": 6
+    },
+    {
         "enabled": false,
         "show_name": "Jobless Reincarnation",
         "season_number": 2,
@@ -7,9 +49,27 @@
     },
     {
         "enabled": true,
+        "show_name": "Moonlit Fantasy",
+        "season_number": 2,
+        "episode_number": 5
+    },
+    {
+        "enabled": false,
+        "show_name": "Blue Exorcist",
+        "season_number": 1,
+        "episode_number": 3
+    },
+    {
+        "enabled": true,
         "show_name": "Mashle",
         "season_number": 2,
-        "episode_number": 2
+        "episode_number": 6
+    },
+    {
+        "enabled": true,
+        "show_name": "Solo Leveling",
+        "season_number": 1,
+        "episode_number": 6
     },
     {
         "enabled": false,
@@ -36,10 +96,10 @@
         "episode_number": 11
     },
     {
-        "enabled": false,
+        "enabled": true,
         "show_name": "Eminence in shadow",
         "season_number": 2,
-        "episode_number": 10
+        "episode_number": 13
     },
     {
         "enabled": false,
@@ -51,22 +111,22 @@
         "enabled": true,
         "show_name": "Frieren",
         "season_number": 1,
-        "episode_number": 18
+        "episode_number": 22
     },
     {
-        "enabled": true,
+        "enabled": false,
         "show_name": "Rurouni Kenshin",
         "season_number": 1,
         "episode_number": 25
     },
     {
-        "enabled": true,
+        "enabled": false,
         "show_name": "Goblin slayer",
         "season_number": 2,
         "episode_number": 13
     },
     {
-        "enabled": true,
+        "enabled": false,
         "show_name": "Jujutsu kaisen",
         "season_number": 2,
         "episode_number": 24
@@ -81,19 +141,13 @@
         "enabled": true,
         "show_name": "one piece",
         "season_number": 0,
-        "episode_number": 1090
+        "episode_number": 1093
     },
     {
         "enabled": false,
         "show_name": "Undead Murder Farce",
         "season_number": 1,
         "episode_number": 14
-    },
-    {
-        "enabled": true,
-        "show_name": "Reign of the Seven Spellblades",
-        "season_number": 1,
-        "episode_number": 16
     },
     {
         "enabled": false,
