@@ -2,8 +2,9 @@ import time
 import requests
 from bs4 import BeautifulSoup
 import json
-import subprocess
+from colorama import init,Fore
 
+init(convert=True)
 
 def load_shows_from_json():
     try:
@@ -67,8 +68,9 @@ def process_data(json_data):
         title_2 = item["title_2"]
         # print(title_2)
         if any(keyword in title_2 for keyword in search_keywords):
-            print("Found episode: ")
-            print(title_2)
+            print(Fore.GREEN  + "Found episode: " , )
+            print(Fore.GREEN + title_2)
+            print(Fore.WHITE)
             return index
     
     
