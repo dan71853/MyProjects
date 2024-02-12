@@ -84,7 +84,6 @@ if shows_data:
             if(show["enabled"] or bypass):                 
                
                 poll_website(show)
-                exit()
                 
                     
 else:
