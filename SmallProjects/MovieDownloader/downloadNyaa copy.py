@@ -1,9 +1,11 @@
 import qbittorrentapi
 import feedparser
 import json
-import subprocess
+from colorama import init,Fore
 
-jsonDir = 'shows copy.json'
+init(convert=True)
+
+jsonDir = 'shows.json'
 
 def login_to_qbittorrent():
     global qbt_client
@@ -48,8 +50,8 @@ def poll_website(show):
             for entry in feed.entries:
                 print(entry.title)
                 if any(keyword in entry.title for keyword in search_keywords):
-                    print("Found episode")
-                    #   qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="E:\\Downloads\\Movies\\"+show_name,category=show_name)                    
+                    print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)
+                    qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="E:\\Downloads\\Movies\\"+show_name,category=show_name)                    
                     show['uploadTime'] = entry.published
                     show['episodeNumber'] +=1
                     return 
@@ -64,7 +66,7 @@ def poll_website(show):
 
 
 qbt_client = None
-# login_to_qbittorrent()
+login_to_qbittorrent()
 
 
 shows_data = load_shows_from_json()
@@ -72,7 +74,7 @@ bypass = False
 
 if shows_data:
     # Process the loaded data
-    print(shows_data)
+    # print(shows_data)
     for show in shows_data:
         if("enabled" in show or bypass):
             if(show["enabled"] or bypass):                 
