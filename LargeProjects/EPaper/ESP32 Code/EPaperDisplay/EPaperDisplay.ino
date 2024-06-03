@@ -22,6 +22,9 @@ void setup() {
     ESP.deepSleep(M_TO_MS * 30);  //Sleep for 30 min
   }
 
+  //Init EPaper
+  initEpaper();
+
   // String outCollection1;
   // isShowOut("https://nyaa.si/?page=rss&q=Demon+Slayer+s04e03&s=seeders&o=desc",&outCollection1);
 
@@ -41,12 +44,14 @@ void setup() {
   String outCollection;
   checkForShows(showDataFile, &outCollection);
 
-  if (outCollection.length() > 0) {
+  // if (outCollection.length() > 0) {
     Serial.println("outCollection");
     Serial.println(outCollection);
-  }
+    printText(outCollection.c_str());
+  // }
+  hibernateDisplay();
 
-  ESP.deepSleep(1 * M_TO_MS);
+  ESP.deepSleep(60 * M_TO_MS);
 }
 
 void loop() {

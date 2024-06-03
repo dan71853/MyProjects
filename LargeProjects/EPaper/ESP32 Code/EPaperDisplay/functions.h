@@ -44,7 +44,12 @@ void checkForShows(const char* path,String *outCollection);
  */
 void checkShow(const char* url, String* outCollection);
 
-
+/**
+ *EPaper
+ */
+void initEpaper();
+void printText(const char *text);
+void hibernateDisplay();
 
 
 
