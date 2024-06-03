@@ -4,32 +4,29 @@
 //  test or else use the LITTLEFS plugin to create a partition
 //  https://github.com/lorol/arduino-esp32littlefs-plugin
 
-#define FORMAT_LITTLEFS_IF_FAILED true
+
+String showData = "https://nyaa.si/?page=rss&q=Chiyu+Mahou+no+Machigatta+Tsukaikata+s01e14&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Delicious+in+Dungeon+s01e21&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=MEGATON+MUSASHI+s01e01&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=The+Faraway+Paladin+s03e01&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Go!+Go!+Loser+Ranger!+s01e07&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Kaiju+s01e07&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Re+Monster+s01e09&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Jobless+Reincarnation+s02e19&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=Moonlit+Fantasy+s02e21&s=seeders&o=desc\nhttps://nyaa.si/?page=rss&q=one+piece+1106+1080&s=seeders&o=desc";
 
 
-const char* rootDir = "/root";
-const char* showDataFile = "/root/showData.txt";
+
 
 void setup() {
   Serial.begin(115200);
   delay(1000);
   Serial.println("Starting");
 
-  if (!LittleFS.begin(FORMAT_LITTLEFS_IF_FAILED)) {
-    Serial.println("LittleFS Mount Failed");
-    return;
+  if (initFileSystem() == false) {
+    //Error, print error message on screen and go to sleep
   }
+
+
   // listDir(LittleFS, "/", 1);  // List the directories up to one level beginning at the root directory
 
-  if (!LittleFS.exists(rootDir)) {
-    createDir(LittleFS, rootDir);  // Create a mydir folder
-  }
 
-  
 
-  writeFile(LittleFS, showDataFile, "E\nfddsfsdff\nfdsz fdasfdsf fs\ndsf dfdf f\nfdsfdsfdfs");  // Create a hello1.txt file with the content "Hello1"
+  writeFile(showDataFile, showData.c_str());  // Create a hello1.txt file with the content "Hello1"
 
-  readFile(LittleFS, showDataFile); // Read the complete file
+  checkForShows(showDataFile);  // Read the complete file
 
   // deleteFile(LittleFS, "/mydir/hello1.txt"); //delete the previously created file
   // removeDir(LittleFS, "/mydir"); //delete the previously created folder

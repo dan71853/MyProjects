@@ -1,5 +1,25 @@
 #include "Functions.h"
 
+const char *rootDir = "/root";
+const char *showDataFile = "/root/showData.txt";
+
+#define FORMAT_LITTLEFS_IF_FAILED true
+
+
+bool initFileSystem() {
+  //Init file system
+  if (LittleFS.begin(FORMAT_LITTLEFS_IF_FAILED) == false) {
+    Serial.println("LittleFS Mount Failed");
+    return false;
+  }
+
+  //Make sure root dir exists
+  if (!LittleFS.exists(rootDir)) {
+    createDir(rootDir);  // Create a mydir folder
+  }
+
+  return true;
+}
 
 void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
   Serial.printf("Listing directory: %s\r\n", dirname);
@@ -32,28 +52,28 @@ void listDir(fs::FS &fs, const char *dirname, uint8_t levels) {
   }
 }
 
-void createDir(fs::FS &fs, const char *path) {
+void createDir(const char *path) {
   Serial.printf("Creating Dir: %s\n", path);
-  if (fs.mkdir(path)) {
+  if (LittleFS.mkdir(path)) {
     Serial.println("Dir created");
   } else {
     Serial.println("mkdir failed");
   }
 }
 
-void removeDir(fs::FS &fs, const char *path) {
+void removeDir(const char *path) {
   Serial.printf("Removing Dir: %s\n", path);
-  if (fs.rmdir(path)) {
+  if (LittleFS.rmdir(path)) {
     Serial.println("Dir removed");
   } else {
     Serial.println("rmdir failed");
   }
 }
 
-void readFile(fs::FS &fs, const char *path) {
+void checkForShows(const char *path) {
   Serial.printf("Reading file: %s\r\n", path);
 
-  File file = fs.open(path);
+  File file = LittleFS.open(path);
   if (!file || file.isDirectory()) {
     Serial.println("- failed to open file for reading");
     return;
@@ -62,15 +82,20 @@ void readFile(fs::FS &fs, const char *path) {
   Serial.println("- read from file:");
   while (file.available()) {
     Serial.print("New Line: ");
-    Serial.println(file.readStringUntil('\n'));
+    String showUrl = file.readStringUntil('\n');
+    Serial.println(showUrl);
+
+    //if(RSS request == show out){
+      //update display
+    // }
   }
   file.close();
 }
 
-void writeFile(fs::FS &fs,  const char *path, const char *message) {
+void writeFile(const char *path, const char *message) {
   Serial.printf("Writing file: %s\r\n", path);
 
-  File file = fs.open(path, FILE_WRITE);
+  File file = LittleFS.open(path, FILE_WRITE);
   if (!file) {
     Serial.println("- failed to open file for writing");
     return;
