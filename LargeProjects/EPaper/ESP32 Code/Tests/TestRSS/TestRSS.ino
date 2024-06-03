@@ -1,13 +1,10 @@
 #include <WiFi.h>
-#include "rssRead.hpp"
+#include "functions.h"
 #include "router.h"
 
-const char* ssid = "Toaster 2.4GHz";
-const char* password = "wildhunt";
 
-const char* url = "https://nyaa.si/?page=rss&q=Kaiju+ember+s01e01+1080p&c=0_0&f=0";
+const char* url = "https://nyaa.si/?page=rss&q=Kaiju+s01e01+1080p&c=0_0&f=0";
 
-static rssRead rss;
 
 void setup() {
   Serial.begin(115200);
@@ -27,17 +24,14 @@ void setup() {
 
 
   Serial.println("Start rssRead ==>");
-  rss.begin();
-  rss.axs(url);
-   rss.dumpXml();
-  while (1) {
-    String dst = rss.finds(String("title"));
-    if (!dst.length()) break;
-    Serial.printf("[%s]\n", dst.c_str());
-  }
-  Serial.printf("<== End rssRead(%d)\n", rss.tagCnt());
-  rss.end();
+
+  isShowOut(url);
+
+  //  rss.dumpXml();
+
   WiFi.disconnect();
+
+  ESP.deepSleep(6e7);  //9e8 = 15Min
 }
 
 void loop() {
