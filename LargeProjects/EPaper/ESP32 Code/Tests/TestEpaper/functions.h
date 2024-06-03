@@ -9,4 +9,7 @@ void initEpaper();
 void printText(const char *text);
 
 void helloWorld();
+
+void hibernateDisplay();
+
 #endif  //FUNCTIONS_H

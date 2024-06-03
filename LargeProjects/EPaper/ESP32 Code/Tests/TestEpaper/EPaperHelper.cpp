@@ -16,7 +16,7 @@ void initEpaper() {
 }
 
 
-void printText(const char* text){
+void printText(const char* text) {
   // display.setRotation(1);
   display.setFont(&FreeMonoBold9pt7b);
   display.setTextColor(GxEPD_BLACK);
@@ -34,6 +34,10 @@ void printText(const char* text){
     display.print(text);
   } while (display.nextPage());
 
+  display.hibernate();
+}
+
+void hibernateDisplay() {
   display.hibernate();
 }
 
@@ -61,7 +65,6 @@ void helloWorld() {
   } while (display.nextPage());
 
   display.hibernate();
-
 }
 const char HelloWorlda[] = "Hello AAAAAAA!";
 
