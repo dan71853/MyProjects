@@ -1,0 +1,110 @@
+[
+    {
+        "enabled": false,
+        "show_name": "Jobless Reincarnation",
+        "season_number": 2,
+        "episode_number": 13
+    },
+    {
+        "enabled": true,
+        "show_name": "Mashle",
+        "season_number": 2,
+        "episode_number": 4
+    },
+    {
+        "enabled": true,
+        "show_name": "Solo Leveling",
+        "season_number": 1,
+        "episode_number": 4
+    },
+    {
+        "enabled": false,
+        "show_name": "Call of the night",
+        "season_number": 1,
+        "episode_number": 2
+    },
+    {
+        "enabled": false,
+        "show_name": "Fate Zero",
+        "season_number": 1,
+        "episode_number": 1
+    },
+    {
+        "enabled": false,
+        "show_name": "Bleach",
+        "season_number": 1,
+        "episode_number": 10
+    },
+    {
+        "enabled": false,
+        "show_name": "Kingdoms of Ruin",
+        "season_number": 1,
+        "episode_number": 11
+    },
+    {
+        "enabled": true,
+        "show_name": "Eminence in shadow",
+        "season_number": 2,
+        "episode_number": 13
+    },
+    {
+        "enabled": false,
+        "show_name": "Jigokuraku",
+        "season_number": 1,
+        "episode_number": 14
+    },
+    {
+        "enabled": true,
+        "show_name": "Frieren",
+        "season_number": 1,
+        "episode_number": 20
+    },
+    {
+        "enabled": false,
+        "show_name": "Rurouni Kenshin",
+        "season_number": 1,
+        "episode_number": 25
+    },
+    {
+        "enabled": false,
+        "show_name": "Goblin slayer",
+        "season_number": 2,
+        "episode_number": 13
+    },
+    {
+        "enabled": false,
+        "show_name": "Jujutsu kaisen",
+        "season_number": 2,
+        "episode_number": 24
+    },
+    {
+        "enabled": false,
+        "show_name": "SYNDUALITY Noir",
+        "season_number": 1,
+        "episode_number": 13
+    },
+    {
+        "enabled": true,
+        "show_name": "one piece",
+        "season_number": 0,
+        "episode_number": 1092
+    },
+    {
+        "enabled": false,
+        "show_name": "Undead Murder Farce",
+        "season_number": 1,
+        "episode_number": 14
+    },
+    {
+        "enabled": false,
+        "show_name": "Dead Mount Death Play AAAA",
+        "season_number": 1,
+        "episode_number": 3
+    },
+    {
+        "enabled": false,
+        "show_name": "Am I Actually the Strongest",
+        "season_number": 1,
+        "episode_number": 13
+    }
+]

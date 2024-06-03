@@ -10,8 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/feedparser": "^2.2.8",
+    "feedparser": "^2.2.10",
+    "nyaapi": "^2.4.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router": "^6.21.3",
+    "react-router-dom": "^6.21.3",
+    "rss": "^1.2.2",
+    "rss-parser": "^3.13.0",
+    "rss-to-json": "^2.1.1",
+    "systeminformation": "^5.21.22",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
