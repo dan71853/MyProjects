@@ -1,212 +1,275 @@
 [
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Chiyu Mahou no Machigatta Tsukaikata",
         "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": "Fri, 09 Feb 2024 18:51:26 -0000"
+        "episodeNumber": 14,
+        "uploadTime": 1711741036.1971667
     },
     {
         "enabled": true,
         "showName": "Delicious in Dungeon",
         "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": "Fri, 09 Feb 2024 03:05:55 -0000"
+        "episodeNumber": 24,
+        "uploadTime": 1717215516.2858522
     },
     {
         "enabled": true,
-        "showName": "parasite",
+        "showName": "Demon Slayer",
+        "seasonNumber": 4,
+        "episodeNumber": 4,
+        "uploadTime": 1716960862.439662
+    },
+    {
+        "enabled": true,
+        "showName": "Reincarnated as a Slime",
+        "seasonNumber": 1,
+        "episodeNumber": 5,
+        "uploadTime": 1717297725.9069002
+    },
+    {
+        "enabled": true,
+        "showName": "MEGATON MUSASHI",
         "seasonNumber": 1,
         "episodeNumber": 1,
-        "uploadTime": "NA"
+        "uploadTime": 1715920288.6000226
     },
     {
         "enabled": true,
+        "showName": "The Faraway Paladin",
+        "seasonNumber": 3,
+        "episodeNumber": 1,
+        "uploadTime": 1712900284.7521846
+    },
+    {
+        "enabled": true,
+        "showName": "Go! Go! Loser Ranger!",
+        "seasonNumber": 1,
+        "episodeNumber": 8,
+        "uploadTime": 1716873888.3190854
+    },
+    {
+        "enabled": true,
+        "showName": "Kaiju",
+        "seasonNumber": 1,
+        "episodeNumber": 9,
+        "uploadTime": 1717272602.9886034
+    },
+    {
+        "enabled": true,
+        "showName": "Re Monster",
+        "seasonNumber": 1,
+        "episodeNumber": 10,
+        "uploadTime": 1716873890.2922654
+    },
+    {
+        "enabled": false,
+        "showName": "Dorohedoro",
+        "seasonNumber": 1,
+        "episodeNumber": 1,
+        "uploadTime": 1711654260.1257398
+    },
+    {
+        "enabled": false,
+        "showName": "Weakest Tamer",
+        "seasonNumber": 1,
+        "episodeNumber": 13,
+        "uploadTime": 1711830001.386774
+    },
+    {
+        "enabled": false,
+        "showName": "The Witch and the Beast",
+        "seasonNumber": 1,
+        "episodeNumber": 13,
+        "uploadTime": 1712350049.6009548
+    },
+    {
+        "enabled": false,
         "showName": "The Strongest Tank's Labyrinth Raids",
         "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": "Sun, 11 Feb 2024 12:30:56 -0000"
+        "episodeNumber": 13,
+        "uploadTime": 1711312435.3494046
     },
     {
         "enabled": false,
         "showName": "Banished from the Hero's Party",
         "seasonNumber": 2,
         "episodeNumber": 2,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Arknights",
         "seasonNumber": 1,
         "episodeNumber": 2,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Metallic Rouge",
         "seasonNumber": 1,
         "episodeNumber": 2,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Undead Unluck ",
         "seasonNumber": 1,
         "episodeNumber": 2,
-        "uploadTime": "NA"
-    },
-    {
-        "enabled": true,
-        "showName": "Shangri-La Frontier",
-        "seasonNumber": 1,
-        "episodeNumber": 19,
-        "uploadTime": "Sun, 11 Feb 2024 14:46:27 -0000"
-    },
-    {
-        "enabled": true,
-        "showName": "Unwanted Undead Adventurer",
-        "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": "Sat, 10 Feb 2024 08:36:46 -0000"
+        "uploadTime": -1
     },
     {
         "enabled": false,
+        "showName": "Shangri-La Frontier",
+        "seasonNumber": 1,
+        "episodeNumber": 26,
+        "uploadTime": 1711916012.082905
+    },
+    {
+        "enabled": false,
+        "showName": "Unwanted Undead Adventurer",
+        "seasonNumber": 1,
+        "episodeNumber": 13,
+        "uploadTime": 1711226468.387183
+    },
+    {
+        "enabled": true,
         "showName": "Jobless Reincarnation",
         "seasonNumber": 2,
-        "episodeNumber": 13,
-        "uploadTime": "NA"
+        "episodeNumber": 20,
+        "uploadTime": 1716873891.5518541
     },
     {
         "enabled": true,
         "showName": "Moonlit Fantasy",
         "seasonNumber": 2,
-        "episodeNumber": 6,
-        "uploadTime": "Tue, 06 Feb 2024 06:39:34 -0000"
+        "episodeNumber": 22,
+        "uploadTime": 1716960868.9476988
     },
     {
         "enabled": false,
         "showName": "Blue Exorcist",
         "seasonNumber": 1,
         "episodeNumber": 3,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Mashle",
         "seasonNumber": 2,
-        "episodeNumber": 6,
-        "uploadTime": "Sun, 04 Feb 2024 06:34:07 -0000"
+        "episodeNumber": 13,
+        "uploadTime": 1711830006.442056
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Solo Leveling",
         "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": "Sun, 11 Feb 2024 06:31:29 -0000"
+        "episodeNumber": 13,
+        "uploadTime": 1711830007.2411053
     },
     {
         "enabled": false,
         "showName": "Call of the night",
         "seasonNumber": 1,
         "episodeNumber": 2,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Fate Zero",
         "seasonNumber": 1,
         "episodeNumber": 1,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Bleach",
         "seasonNumber": 1,
         "episodeNumber": 10,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Kingdoms of Ruin",
         "seasonNumber": 1,
         "episodeNumber": 11,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Eminence in shadow",
         "seasonNumber": 2,
         "episodeNumber": 13,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Jigokuraku",
         "seasonNumber": 1,
         "episodeNumber": 14,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Frieren",
         "seasonNumber": 1,
-        "episodeNumber": 23,
-        "uploadTime": "Sat, 10 Feb 2024 08:36:48 -0000"
+        "episodeNumber": 29,
+        "uploadTime": 1711138049.1563358
     },
     {
         "enabled": false,
         "showName": "Rurouni Kenshin",
         "seasonNumber": 1,
         "episodeNumber": 25,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Goblin slayer",
         "seasonNumber": 2,
         "episodeNumber": 13,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Jujutsu kaisen",
         "seasonNumber": 2,
         "episodeNumber": 24,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "SYNDUALITY Noir",
         "seasonNumber": 1,
         "episodeNumber": 13,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": true,
         "showName": "one piece",
         "seasonNumber": 0,
-        "episodeNumber": 1094,
-        "uploadTime": "Sun, 11 Feb 2024 21:27:59 -0000"
+        "episodeNumber": 1108,
+        "uploadTime": 1717297733.234336
     },
     {
         "enabled": false,
         "showName": "Undead Murder Farce",
         "seasonNumber": 1,
         "episodeNumber": 14,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Dead Mount Death Play AAAA",
         "seasonNumber": 1,
         "episodeNumber": 3,
-        "uploadTime": "NA"
+        "uploadTime": -1
     },
     {
         "enabled": false,
         "showName": "Am I Actually the Strongest",
         "seasonNumber": 1,
         "episodeNumber": 13,
-        "uploadTime": "NA"
+        "uploadTime": -1
     }
 ]
