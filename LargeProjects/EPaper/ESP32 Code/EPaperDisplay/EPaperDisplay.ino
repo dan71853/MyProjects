@@ -46,7 +46,7 @@ void setup() {
     Serial.println(outCollection);
   }
 
-  ESP.deepSleep(0.5 * M_TO_MS);
+  ESP.deepSleep(1 * M_TO_MS);
 }
 
 void loop() {

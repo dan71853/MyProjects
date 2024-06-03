@@ -1,7 +1,6 @@
 #include "functions.h"
 
 
-static rssRead rss;
 const char* search_keywords[] = {
   "[EMBER]",
   "[Xtrem]",
@@ -11,34 +10,60 @@ const char* search_keywords[] = {
 };
 
 
-bool isUploaderTrusted(String* title) {
+bool isUploaderTrusted(String title) {
   for (const char* keyword : search_keywords) {
-    if (title->indexOf(keyword) >= 0) {
+    if (title.indexOf(keyword) >= 0) {
       return true;
     }
   }
   return false;
 }
 
-void isShowOut(const char* showUrl, String* outCollection) {
-  Serial.println(showUrl);
-  rss.begin();       //init the rss class
-  rss.axs(showUrl);  //Request the data
-  //Wait for response
 
-  while (1) {
-    String title = rss.finds(String("title"));  //Get only the title
-    // Serial.println(title);
-    if (!title.length()) break;
+String getRequest(const char* url) {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(url);
 
-    if (isUploaderTrusted(&title)) {
-      Serial.println(title);
-      *outCollection = *outCollection + title;
-      rss.end();
-      return;
+    int httpResponseCode = http.GET();
+
+    if (httpResponseCode > 0) {
+      String payload = http.getString();
+      return payload;
+    } else {
+      Serial.print("Error on HTTP request: ");
+      Serial.println(httpResponseCode);
     }
 
-    // Serial.printf("[%s]\n", title.c_str());
+    http.end();
+  } else {
+    Serial.println("Error in Wi-Fi connection");
   }
-  rss.end();
+  return "";
+}
+
+void checkShow(const char* url, String* outCollection) {
+  String xml = getRequest(url);
+  // Serial.println(xml);
+  uint16_t startIndex = 0;
+  uint16_t xmlLength = xml.length();
+
+  while (startIndex < xmlLength) {
+    int16_t tagStart = xml.indexOf("<title>", startIndex);
+    if (tagStart == -1) {
+      Serial.println("Start Not found");
+      return;
+    }
+    int16_t tagEnd = xml.indexOf("</title>", tagStart);
+    if (tagEnd == -1) {
+      Serial.println("End Not found");
+      return;
+    }
+    startIndex = tagEnd;
+    String titleText = xml.substring(tagStart + 7, tagEnd);
+    if (isUploaderTrusted(titleText)) {
+      *outCollection = *outCollection + titleText + '\n';
+      return;
+    }
+  }
 }

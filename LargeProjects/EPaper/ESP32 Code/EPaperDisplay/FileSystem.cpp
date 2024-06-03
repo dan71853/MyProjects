@@ -85,7 +85,7 @@ void checkForShows(const char *path, String *outCollection) {
     String showUrl = file.readStringUntil('\n');
     Serial.println(showUrl);
 
-    isShowOut(showUrl.c_str(), outCollection);
+    checkShow(showUrl.c_str(), outCollection);
     //   Serial.println("Show out");
     //   Serial.println(showUrl);
     // }

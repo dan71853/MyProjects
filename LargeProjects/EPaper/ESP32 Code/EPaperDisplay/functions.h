@@ -42,8 +42,8 @@ void checkForShows(const char* path,String *outCollection);
 /*
  * RssHelper
  */
-bool isUploaderTrusted(String* title);
-void isShowOut(const char* showUrl,String *outCollection);
+void checkShow(const char* url, String* outCollection);
+
 
 
 
