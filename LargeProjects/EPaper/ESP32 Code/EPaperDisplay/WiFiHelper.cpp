@@ -6,10 +6,9 @@ const char* serverName = "http://192.168.1.14:8000/";
 bool connectToRouter() {
   uint32_t timeout = millis();
   WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED || millis() - timeout > 10000) {  //Wait for 10 seconds
+  while (WiFi.status() != WL_CONNECTED && millis() - timeout  < 10000) {  //Wait for 10 seconds
     delay(1000);
-    // Serial.println("Connecting to WiFi...");
-    timeout = millis();
+    Serial.println("Connecting to WiFi...");
   }
 
   return WiFi.status() == WL_CONNECTED;  //return true if connected
