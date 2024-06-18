@@ -15,7 +15,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.handle_image()
         else:
             self.handle_not_found()
-    
+    def log_message(self, format, *args):
+        return
+
     def handle_shows(self):
         try:
             with open('../../../SmallProjects/MovieDownloader/shows.json', 'r') as file:
@@ -37,13 +39,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(response_content.encode('utf-8'))
+            exit()
         except Exception as e:
             self.send_response(500)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             error_message = f"Error: {str(e)}"
             self.wfile.write(error_message.encode('utf-8'))
-
     def handle_status(self):
         response_content = "Server is running"
         self.send_response(200)
@@ -82,6 +84,6 @@ class RequestHandler(BaseHTTPRequestHandler):
 def runServer(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print(f'Starting server on port {port}...')
+    # print(f'Starting server on port {port}...')
     httpd.serve_forever()
 
