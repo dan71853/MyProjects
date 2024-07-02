@@ -1,55 +1,53 @@
-int THRESHOLD = 60; // Sensitivity threshold
+int THRESHOLD_LEFT = 60;  // Sensitivity threshold
+int THRESHOLD_RIGHT = 73;  // Sensitivity threshold
 
-RTC_DATA_ATTR int bootCount = 0; // Number of reboots
+RTC_DATA_ATTR int bootCount = 0;  // Number of reboots
 
-touch_pad_t touchPin; // GPIO pin that triggered the wake-up
+touch_pad_t touchPin;  // GPIO pin that triggered the wake-up
 
 void setup() {
 
-Serial.begin(115200); // Start serial communication at 115200 baud rate
 
-++bootCount; // Add 1 to the current value of bootCount
+  Serial.begin(115200);  // Start serial communication at 115200 baud rate
 
-Serial.println("Boot number: " + String(bootCount)); // Print the value of bootCount on the serial monitor
+  ++bootCount;  // Add 1 to the current value of bootCount
 
-delay(1000); //Take some time to open up the Serial Monitor
+  Serial.println("Boot number: " + String(bootCount));  // Print the value of bootCount on the serial monitor
 
-touchPin = esp_sleep_get_touchpad_wakeup_status(); // Store which touch sensor was activated from wake-up data
+  delay(1000);  //Take some time to open up the Serial Monitor
 
-if (touchPin == 3) {
+  touchPin = esp_sleep_get_touchpad_wakeup_status();  // Store which touch sensor was activated from wake-up data
 
-Serial.println("Touch detected on GPIO 15");
+  if (touchPin == TOUCH_PAD_NUM9) {
 
-} // Check which touch sensor triggered the wake-up and display its corresponding GPIO pin number
+    Serial.println("Touch detected on GPIO 32, Left button");
 
-else if (touchPin == 7) {
+  }  // Check which touch sensor triggered the wake-up and display its corresponding GPIO pin number
 
-Serial.println("Touch detected on GPIO 27");
+  else if (touchPin == TOUCH_PAD_NUM5) {
 
-}
+    Serial.println("Touch detected on GPIO 12, Right button");
 
-else
+  }
 
-{
+  else
 
-Serial.println("Wakeup not by touchpad");
+  {
 
-}
+    Serial.println("Wakeup not by touchpad");
+  }
 
-touchSleepWakeUpEnable(T3, THRESHOLD); // Enable touch sensor 3 as wake-up source
+  touchSleepWakeUpEnable(T9, THRESHOLD_LEFT);  
+  touchSleepWakeUpEnable(T5, THRESHOLD_RIGHT); 
 
-touchSleepWakeUpEnable(T7, THRESHOLD); // Enable touch sensor 7 as wake-up source
+  Serial.println("Preparing to sleep now");  // Print when the ESP is about to go into deep sleep mode
 
-Serial.println("Preparing to sleep now"); // Print when the ESP is about to go into deep sleep mode
+  Serial.flush();  // Make sure the serial port is empty
 
-Serial.flush(); // Make sure the serial port is empty
-
-esp_deep_sleep_start(); // Enable the deep sleep mode
-
+  esp_deep_sleep_start();  // Enable the deep sleep mode
 }
 
 void loop() {
 
-//This will never be reached
-
+  //This will never be reached
 }
