@@ -93,14 +93,14 @@ void readFile(const char *path) {
   file.close();
 }
 void readFileRaw(const char *path) {
-  Serial.printf("Reading file: %s\r\n", path);
+
 
   File file = LittleFS.open(path);
+  Serial.printf("Reading file: %s, of size: %d\n", path,file.size());
   if (!file || file.isDirectory()) {
     Serial.println("- failed to open file for reading");
     return;
   }
-
   Serial.println("- read from file:");
   while (file.available()) {
 

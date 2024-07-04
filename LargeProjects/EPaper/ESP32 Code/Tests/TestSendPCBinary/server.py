@@ -1,4 +1,5 @@
 import socket
+import os
 
 def start_server(host='0.0.0.0', port=8001, data=b''):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,5 +18,8 @@ def start_server(host='0.0.0.0', port=8001, data=b''):
 
 if __name__ == "__main__":
     # Example binary data
-    binary_data = b'\x01\x02\x03\x04\x05'
+    # there are 134400 bytes per image
+    size = 134400
+    binary_data = bytearray(os.urandom(size))
+    print(binary_data[-10:])
     start_server(data=binary_data)
