@@ -165,7 +165,8 @@ void draw4x4Bitmap() {
 void drawBitmaps7c300x180() {
 
 
-  display.drawNative(WS_Bitmap7c300x180, 0, (display.epd2.WIDTH - 300) / 2, (display.epd2.HEIGHT - 180) / 2, 300, 180, false, false, true);
+  display.writeNative(WS_Bitmap7c300x180, 0, (display.epd2.WIDTH - 300) / 2, (display.epd2.HEIGHT - 180) / 2, 300, 180, false, false, true);
+  display.refresh();
   delay(5000);
 }
 

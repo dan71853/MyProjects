@@ -21,8 +21,9 @@ void setup() {
   initEpaper();
   // SPI.begin(sck, miso, mosi, ss); // preset for remapped pins
 
-  printText("ngdxuhjkgfdshjgd shjkdfvsbhjkgd \n fduksfdskhfhkgfgfsg \n fhdkjshfjudhfjdshfjkdfjhx gihj ghj fxvjghvfsd jhg fvjh");
-  // drawBitmaps7c300x180();
+  // printText("ngdxuhjkgfdshjgd shjkdfvsbhjkgd \n fduksfdskhfhkgfgfsg \n fhdkjshfjudhfjdshfjkdfjhx gihj ghj fxvjghvfsd jhg fvjh");
+  drawBitmaps7c300x180();
+  
   hibernateDisplay();
   // draw4x4Bitmap();
   // drawTestBitmap();

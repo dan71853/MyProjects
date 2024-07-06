@@ -11,5 +11,6 @@ void printText(const char *text);
 void helloWorld();
 
 void hibernateDisplay();
+void drawBitmaps7c300x180();
 
 #endif  //FUNCTIONS_H
