@@ -83,45 +83,32 @@ def bmp_to_cpp_array(image_path, output_path):
     with open(output_path, "w") as file:
         file.write(cpp_array)
 
-# Function to read BMP image and convert to C++ array of chars
-def bmp_to_raw_array(image_path, output_path):
+def bmp_to_raw_array(image_path):
     # Open the image
     img = Image.open(image_path)
-    # img = sizeImage(img)
+    
     # Convert image to RGB mode if not already in RGB
     img = img.convert("RGB")
+    
     # Resize the image to ensure its width is even
     if img.width % 2 != 0:
         img = img.resize((img.width + 1, img.height))
     
-    # Initialize the C++ array
-    array = []
+    # Initialize the byte array
+    byte_array = bytearray()
     
-    # print("AAAAAAAAAA")
     # Iterate over each pixel pair
-    for y in range(0, img.height, 1):
+    for y in range(0, img.height):
         for x in range(0, img.width, 2):
             # Get the RGB values of the 2x2 pixel block
-            # print("Y = " + str(y))
-            # print("X = " + str(x))
-            pixel1 = img.getpixel((x,y))
-            pixel2 = img.getpixel((x+1,y))
-            # print(pixel1)
-            # print(pixel2)
-            pixels = [pixel1, pixel2]
-            # print(pixels)
-            # pixels = [img.getpixel((x + i, y )) for i in range(2) for j in range(2)]
+            pixel1 = img.getpixel((x, y))
+            pixel2 = img.getpixel((x + 1, y))
             
             # Convert the RGB values to chars and combine them
-            char_value = (rgb_to_char(pixels[0]) << 4) | rgb_to_char(pixels[1])
-            # print(char_value)
-            # # Append the char to the C++ array
-            array.append(char_value)
-    # Remove the trailing comma and add the array closing bracket
-    # array = array.rstrip(",") 
+            char_value = (rgb_to_char(pixel1) << 4) | rgb_to_char(pixel2)
+            
+            # Append the char to the byte array
+            byte_array.append(char_value)
     
-    return array
-    # Write the C++ array to the output file
-    with open(output_path, "w") as file:
-        file.write(array)
+    return byte_array
 
