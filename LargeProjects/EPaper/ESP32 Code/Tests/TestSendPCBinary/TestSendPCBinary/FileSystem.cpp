@@ -104,9 +104,8 @@ void readFileRaw(const char *path) {
   Serial.println("- read from file:");
   while (file.available()) {
 
-    while (file.available()) {
       Serial.println(file.read());
-    }
+    
 
     //if(RSS request == show out){
     //update display

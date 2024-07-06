@@ -54,6 +54,9 @@ void listenForCommand() {
       getData();
     } else if (strcmp(buffer, "read") == 0) {
       readFileRaw(testDataFile);
+    } else if (strcmp(buffer, "refresh") == 0) {
+      drawBitmaps7c300x180();
+      hibernateDisplay();
 
     } else {
       Serial.println("Unknown command");
@@ -74,8 +77,16 @@ void setup() {
     Serial.print(".");
   }
   Serial.println(" connected!");
+  Serial.println(WiFi.localIP());
+  Serial.println(WiFi.macAddress());
+
 
   initFileSystem();
+
+
+  initEpaper();
+
+
   // listDir(LittleFS, "/", 1);
   // printFile(testDataFile, "dfdffsd");
   // uint8_t buffer[6] = { 1, 5, 44, 66, 6, 25 };
