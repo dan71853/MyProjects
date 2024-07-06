@@ -90,12 +90,12 @@ void helloWorlda() {
 
 const uint8_t bitmap4x4[] = {
   0x44,
-  0x44, 
-  0x44, 
-  0x44, 
-  0x44, 
-  0x44, 
-   
+  0x44,
+  0x44,
+  0x44,
+  0x44,
+  0x44,
+
 };
 
 void draw4x4Bitmap() {
@@ -105,10 +105,14 @@ void draw4x4Bitmap() {
   delay(5000);
 }
 
-void drawBitmaps7c300x180() {
+void updateEpaperImage() {
 
+  const uint8_t tempArray[] = {
+    0x44,
 
-  display.writeNative(bitmap4x4, 0, (display.epd2.WIDTH - 300) / 2, (display.epd2.HEIGHT - 180) / 2, 300, 180, false, false, true);
+  };
+
+  display.writeNative(tempArray, 0, (display.epd2.WIDTH - 300) / 2, (display.epd2.HEIGHT - 180) / 2, 300, 180, false, false, true);
   display.refresh();
   delay(5000);
 }

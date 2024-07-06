@@ -3,6 +3,7 @@
 #include "FS.h"
 #include <LittleFS.h>
 #include <Arduino.h>
+#include <WiFi.h>
 
 
 /**
@@ -11,6 +12,7 @@
 
 extern const char *rootDir;
 extern const char *testDataFile;
+extern const char *imageDataFile;
 
 bool initFileSystem();
 
@@ -27,7 +29,12 @@ void readFileRaw(const char *path);
 
 void initEpaper();
 void hibernateDisplay();
-void drawBitmaps7c300x180();
+
+void updateEpaperImage();
+
+//ImageUpdater
+void getNewImageData();
+
 
 
 #endif  //FUNCTIONS_H

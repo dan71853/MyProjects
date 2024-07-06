@@ -2,6 +2,7 @@
 
 const char *rootDir = "/root";
 const char *testDataFile = "/root/testData.txt";
+const char *imageDataFile = "/root/imageData.txt";
 
 #define FORMAT_LITTLEFS_IF_FAILED true
 
