@@ -13,6 +13,8 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.handle_status()
         elif parsed_path.path == '/image':
             self.handle_image()
+        elif parsed_path.path == '/test':
+            self.handle_testFile()
         else:
             self.handle_not_found()
     def log_message(self, format, *args):
@@ -80,6 +82,16 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(b'404: Not Found')
+
+    def handle_testFile(self):
+
+        response_content = 'AAA'
+
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(response_content.encode('utf-8'))
+    
 
 def runServer(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
     server_address = ('', port)
