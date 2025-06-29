@@ -13,3 +13,11 @@ Created the first version, made a test print to check the fit.
 ### Problems
 - It is slightly to long, the tip should be shortened a little bit (<1mm).
 - The entire thing is backwards
+
+## Version 2.0
+
+Made the part slightly smaller.
+
+Flipped the connectors.
+
+ <img src="images/Bracket-V2.0A.png" height="300"/><
