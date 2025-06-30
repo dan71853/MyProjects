@@ -21,3 +21,8 @@ Made the part slightly smaller.
 Flipped the connectors.
 
  <img src="images/Bracket-V2.0A.png" height="300"/><
+
+ ## Version 2.1
+ Slightly increased the clearance for the holes based on [this guide](https://www.trfastenings.com/Knowledge-Base/Engineering-Data/tapping-sizes-and-clearance-holes).
+
+ 
