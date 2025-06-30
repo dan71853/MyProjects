@@ -25,4 +25,16 @@ Flipped the connectors.
  ## Version 2.1
  Slightly increased the clearance for the holes based on [this guide](https://www.trfastenings.com/Knowledge-Base/Engineering-Data/tapping-sizes-and-clearance-holes).
 
+ # Ordering
+ Ordering from [JLC3DP](https://jlc3dp.com/).
  
+ Material is Titanium TC4, costs around USD10.
+
+There was a File Error when ordering, `< 0.8mm wall thickness detected` 
+This was from the small hole for the magnetic connector.
+
+<img src="images/Bracket-V2.1A.png" height="300"/>
+
+There was the option go ahead at the risk of cracking or deformation. 
+I accepted the risk as this hole will not experience a lot of force.
+The other option would have been to make the hole into a slot that connected to the large square hole.
