@@ -4,14 +4,14 @@ import time
 from colorama import init,Fore
 from datetime import datetime,timezone
 from dateutil.relativedelta import relativedelta
+from TrustedUploaders import search_keywords
 
 init(convert=True)
 
 jsonDir = 'shows.json'
 
+ 
 
-# search_keywords = ["[EMBER]", "[ToonsHub]","[Xtrem]","[DKB]","[SubsPlease]","[LostYears]"]
-search_keywords = ["[EMBER]", "[Xtrem]","[DKB]","[SubsPlease]","[LostYears]"] #"[ToonsHub]"
 
 date_format = "%a, %d %b %Y %H:%M:%S %z"
 
@@ -36,18 +36,23 @@ def poll_website(show):
      
     if season_number==0:
         url = f"https://nyaa.si/?page=rss&q={show_name}+{episode_number:04d}+1080&s=seeders&o=desc"
+    elif season_number==-1:
+        url = f"https://nyaa.si/?page=rss&q={show_name}+{episode_number:02d}+1080&s=seeders&o=desc"
     else:
         url = f"https://nyaa.si/?page=rss&q={show_name}+s{season_number:02d}e{episode_number:02d}&s=seeders&o=desc"
     url = url.replace(" ", "+")
     feed = feedparser.parse(url)
+    
+    print(url)
 
     if feed.bozo == 0:
         if len(feed.entries)>0:
             for entry in feed.entries:
                 # print(entry.title)
-                if any(keyword in entry.title for keyword in search_keywords):
-                    print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)                   
-                    return 
+                if " [English Dub]" not in entry.title:
+                    if any(keyword in entry.title for keyword in search_keywords):
+                        print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)                   
+                        return 
             print("No trusted uploader found")
     else:
         print("Error parsing feed:", feed.bozo_exception)
