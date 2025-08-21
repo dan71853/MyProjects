@@ -1,7 +1,8 @@
 #include "functions.h"
 #include "Arduino.h" 
 
-const char* serverName = "http://192.168.1.14:8000/";
+const char* serverName = "http://192.168.1.50:8000/";
+// const char* serverName = "DAN-PC";
 
 bool connectToRouter() {
   uint32_t timeout = millis();

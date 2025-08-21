@@ -6,7 +6,8 @@ const char* search_keywords[] = {
   "[Xtrem]",
   "[DKB]",
   "[SubsPlease]",
-  "[LostYears]"
+  "[LostYears]",
+  "[Judas]",
 };
 
 

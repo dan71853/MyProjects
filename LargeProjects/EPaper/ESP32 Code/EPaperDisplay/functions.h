@@ -36,7 +36,7 @@ void listDir(fs::FS& fs, const char* dirname, uint8_t levels);
 void createDir(const char* path);
 
 void writeFile(const char* path, const char* message);
-void checkForShows(const char* path,String *outCollection);
+void checkForShows(const char* path, String* outCollection);
 
 
 /*
@@ -48,8 +48,12 @@ void checkShow(const char* url, String* outCollection);
  *EPaper
  */
 void initEpaper();
-void printText(const char *text);
+void printText(const char* text);
 void hibernateDisplay();
+void updateEpaperImage();
+
+void getNewImageData();
+
 
 
 

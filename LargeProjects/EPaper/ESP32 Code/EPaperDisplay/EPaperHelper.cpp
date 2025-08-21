@@ -15,16 +15,23 @@ void initEpaper() {
 
 
 void printText(const char* text){
+  Serial.println("Printing text");
   // display.setRotation(1);
+  Serial.println("setFont");
   display.setFont(&FreeMonoBold9pt7b);
+  Serial.println("setTextColor");
   display.setTextColor(GxEPD_BLACK);
   int16_t tbx, tby;
   uint16_t tbw, tbh;
+  Serial.println("getTextBounds");
   display.getTextBounds(text, 0, 0, &tbx, &tby, &tbw, &tbh);
   // center the bounding box by transposition of the origin:
   uint16_t x = ((display.width() - tbw) / 2) - tbx;
   uint16_t y = ((display.height() - tbh) / 2) - tby;
+
+  Serial.println("setFullWindow");
   display.setFullWindow();
+  Serial.println("firstPage");
   display.firstPage();
   do {
     display.fillScreen(GxEPD_WHITE);
@@ -41,4 +48,15 @@ void hibernateDisplay() {
 
 
 
+void updateEpaperImage() {
+
+  const uint8_t tempArray[] = {
+    0x44,
+
+  };
+
+  display.writeNative2(tempArray, 0, (display.epd2.WIDTH - 300) / 2, (display.epd2.HEIGHT - 180) / 2, 300, 180, false, false, true);
+  display.refresh();
+  delay(5000);
+}
 
