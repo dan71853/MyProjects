@@ -2,6 +2,7 @@ import socket
 import random
 import os
 from BmpConversion import bmp_to_raw_array
+from logger import log
 
 def getRandomImage():
     folder_path = './ConvertedImages'
@@ -14,7 +15,7 @@ def getRandomImage():
 
     # Return the full path to the random file
     random_file_path = os.path.join(folder_path, random_file)
-    print(random_file_path)
+    log(random_file_path)
     return random_file_path
 
 
@@ -23,19 +24,19 @@ def startImageServer(host='0.0.0.0', port=8001):
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(1)
-    print(f"Listening on {host}:{port}")
+    log(f"Listening on {host}:{port}")
+    
 
     while True:
         client_socket, addr = server_socket.accept()
-        print(f"Connection from {addr}")
+        log(f"Connection from {addr}")
         binary_data = bmp_to_raw_array(getRandomImage())
         
-
         # Send the binary data
         client_socket.sendall(binary_data)
         
         client_socket.close()
-        return
+        # return
 
 # if __name__ == "__main__": 
     # Example binary data

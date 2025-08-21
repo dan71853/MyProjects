@@ -1,0 +1,10 @@
+round off edges on inside of screen support DONE
+increase height of bottom bevel Done
+fix outside edge - Done removed fillet
+make standoff stronger - DONE
+battery switch - DONE
+
+inside top left corner has problems 
+
+reduce main standoff height by 1mm
++

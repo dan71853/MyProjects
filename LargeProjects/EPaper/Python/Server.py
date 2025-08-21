@@ -1,6 +1,7 @@
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import urllib
+from logger import log
 
 from BmpConversion import bmp_to_raw_array
 
@@ -30,6 +31,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 if show['enabled']:
                     if show['seasonNumber']==0:
                         show_info = f"https://nyaa.si/?page=rss&q={show['showName']}+{show['episodeNumber']:04d}+1080&s=seeders&o=desc"
+                    elif show['seasonNumber']==0:
+                        url = f"https://nyaa.si/?page=rss&q={show['showName']}+{show['episodeNumber']:02d}+1080&s=seeders&o=desc"
                     else:
                         show_info = f"https://nyaa.si/?page=rss&q={show['showName']}+s{show['seasonNumber']:02d}e{show['episodeNumber']:02d}&s=seeders&o=desc"
                     enabled_shows.append(show_info.replace(" ", "+"))
@@ -41,7 +44,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(response_content.encode('utf-8'))
-            exit()
+            # exit()
         except Exception as e:
             self.send_response(500)
             self.send_header('Content-type', 'text/plain')
@@ -96,6 +99,6 @@ class RequestHandler(BaseHTTPRequestHandler):
 def runServer(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    # print(f'Starting server on port {port}...')
+    log(f'Starting server on port {port}...')
     httpd.serve_forever()
 
