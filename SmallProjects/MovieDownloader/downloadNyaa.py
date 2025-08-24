@@ -2,9 +2,9 @@ import qbittorrentapi
 import feedparser
 import json
 import time
-from colorama import init,Fore
+from colorama import init,Fore,Style
 from TrustedUploaders import search_keywords
-init(convert=True)
+init(autoreset=True)
 
 jsonDir = 'shows.json'
 
@@ -55,13 +55,13 @@ def poll_website(show):
                 if " [English Dub]" not in entry.title:
                     if "[EMBER]" in entry.title:
                         print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)
-                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="G:\\Anime\\"+show_name,category=show_name)                    
+                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/home/daniel/Downloads/Anime/"+show_name,category=show_name)                    
                         show['uploadTime'] = timestamp_seconds = time.time()
                         show['episodeNumber'] +=1
                         return 
                     if any(keyword in entry.title for keyword in search_keywords):
                         print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)
-                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="G:\\Anime\\"+show_name,category=show_name)                    
+                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/home/daniel/Downloads/Anime/"+show_name,category=show_name)                    
                         show['uploadTime'] = timestamp_seconds = time.time()
                         show['episodeNumber'] +=1
                         return 

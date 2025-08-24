@@ -1,12 +1,12 @@
 import feedparser
 import json
 import time
-from colorama import init,Fore
+from colorama import init,Fore,Style
 from datetime import datetime,timezone
 from dateutil.relativedelta import relativedelta
 from TrustedUploaders import search_keywords
 
-init(convert=True)
+init(autoreset=True)
 
 jsonDir = 'shows.json'
 
