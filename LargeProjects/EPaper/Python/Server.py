@@ -97,7 +97,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     
 
 def runServer(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
-    server_address = ('', port)
+    server_address = ('0.0.0.0', port)
     httpd = server_class(server_address, handler_class)
     log(f'Starting server on port {port}...')
     httpd.serve_forever()

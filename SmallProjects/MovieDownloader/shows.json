@@ -17,8 +17,8 @@
         "enabled": true,
         "showName": "Gachiakuta",
         "seasonNumber": 1,
-        "episodeNumber": 6,
-        "uploadTime": 1754854360.4123254
+        "episodeNumber": 7,
+        "uploadTime": 1755559349.6850302
     },
     {
         "enabled": true,
@@ -31,25 +31,25 @@
         "enabled": true,
         "showName": "Clevatess",
         "seasonNumber": 1,
-        "episodeNumber": 8,
-        "uploadTime": 1755100906.3829257
+        "episodeNumber": 9,
+        "uploadTime": 1755751377.1151762
     },
     {
         "enabled": true,
         "showName": "The Water Magician",
         "seasonNumber": 1,
-        "episodeNumber": 6,
-        "uploadTime": 1754622135.4744215
+        "episodeNumber": 8,
+        "uploadTime": 1755835431.6166515
     },
     {
         "enabled": true,
         "showName": "Lord of Mysteries",
         "seasonNumber": -1,
-        "episodeNumber": 9,
-        "uploadTime": 1754622183.929775
+        "episodeNumber": 11,
+        "uploadTime": 1755929755.6108232
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "COMAPSS",
         "seasonNumber": 1,
         "episodeNumber": 1,
@@ -59,18 +59,18 @@
         "enabled": true,
         "showName": "Kijin Gentoushou",
         "seasonNumber": 1,
-        "episodeNumber": 19,
-        "uploadTime": 1754942351.2220936
+        "episodeNumber": 20,
+        "uploadTime": 1755559353.9680305
     },
     {
         "enabled": true,
         "showName": "To be hero X",
         "seasonNumber": 1,
-        "episodeNumber": 20,
-        "uploadTime": 1754799982.8559551
+        "episodeNumber": 22,
+        "uploadTime": 1756015398.2726882
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Lazarus",
         "seasonNumber": 1,
         "episodeNumber": 14,
@@ -91,7 +91,7 @@
         "uploadTime": 1736399495.0365357
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Red Ranger Becomes an Adventurer in Another World",
         "seasonNumber": 1,
         "episodeNumber": 13,
@@ -136,8 +136,8 @@
         "enabled": true,
         "showName": "DandaDan",
         "seasonNumber": 2,
-        "episodeNumber": 7,
-        "uploadTime": 1754622188.4447737
+        "episodeNumber": 9,
+        "uploadTime": 1755803235.8311694
     },
     {
         "enabled": false,
@@ -210,7 +210,7 @@
         "uploadTime": 1712900284.7521846
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Go! Go! Loser Ranger",
         "seasonNumber": 2,
         "episodeNumber": 13,
@@ -220,8 +220,8 @@
         "enabled": true,
         "showName": "Kaiju",
         "seasonNumber": 2,
-        "episodeNumber": 5,
-        "uploadTime": 1754769945.6228337
+        "episodeNumber": 7,
+        "uploadTime": 1755985151.8343208
     },
     {
         "enabled": false,
@@ -287,7 +287,7 @@
         "uploadTime": -1
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Shangri-La Frontier",
         "seasonNumber": 2,
         "episodeNumber": 26,
