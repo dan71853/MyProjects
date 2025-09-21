@@ -17,8 +17,15 @@
         "enabled": true,
         "showName": "Gachiakuta",
         "seasonNumber": 1,
-        "episodeNumber": 7,
-        "uploadTime": 1755559349.6850302
+        "episodeNumber": 12,
+        "uploadTime": 1758477758.204141
+    },
+    {
+        "enabled": true,
+        "showName": "The Earthbound Mole",
+        "seasonNumber": 1,
+        "episodeNumber": 12,
+        "uploadTime": 1758049885.5778487
     },
     {
         "enabled": true,
@@ -31,22 +38,22 @@
         "enabled": true,
         "showName": "Clevatess",
         "seasonNumber": 1,
-        "episodeNumber": 9,
-        "uploadTime": 1755751377.1151762
+        "episodeNumber": 13,
+        "uploadTime": 1758133486.0278094
     },
     {
         "enabled": true,
         "showName": "The Water Magician",
         "seasonNumber": 1,
-        "episodeNumber": 8,
-        "uploadTime": 1755835431.6166515
+        "episodeNumber": 12,
+        "uploadTime": 1758225990.4637625
     },
     {
         "enabled": true,
         "showName": "Lord of Mysteries",
         "seasonNumber": -1,
-        "episodeNumber": 11,
-        "uploadTime": 1755929755.6108232
+        "episodeNumber": 14,
+        "uploadTime": 1757741201.2203114
     },
     {
         "enabled": false,
@@ -59,15 +66,15 @@
         "enabled": true,
         "showName": "Kijin Gentoushou",
         "seasonNumber": 1,
-        "episodeNumber": 20,
-        "uploadTime": 1755559353.9680305
+        "episodeNumber": 23,
+        "uploadTime": 1757375162.4044166
     },
     {
         "enabled": true,
         "showName": "To be hero X",
         "seasonNumber": 1,
-        "episodeNumber": 22,
-        "uploadTime": 1756015398.2726882
+        "episodeNumber": 25,
+        "uploadTime": 1757828763.1203036
     },
     {
         "enabled": false,
@@ -136,8 +143,8 @@
         "enabled": true,
         "showName": "DandaDan",
         "seasonNumber": 2,
-        "episodeNumber": 9,
-        "uploadTime": 1755803235.8311694
+        "episodeNumber": 13,
+        "uploadTime": 1758217655.358062
     },
     {
         "enabled": false,
@@ -220,8 +227,8 @@
         "enabled": true,
         "showName": "Kaiju",
         "seasonNumber": 2,
-        "episodeNumber": 7,
-        "uploadTime": 1755985151.8343208
+        "episodeNumber": 11,
+        "uploadTime": 1758393343.5395427
     },
     {
         "enabled": false,
