@@ -1,0 +1,4 @@
+feedparser
+colorama
+python-dateutil
+qbittorrent-api
