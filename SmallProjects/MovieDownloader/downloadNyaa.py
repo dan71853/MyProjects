@@ -55,13 +55,13 @@ def poll_website(show):
                 if " [English Dub]" not in entry.title:
                     if "[EMBER]" in entry.title:
                         print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)
-                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/media/dan/Anime/Anime/"+show_name,category=show_name)                    
+                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/mnt/Anime/Anime/"+show_name,category=show_name)                    
                         show['uploadTime'] = timestamp_seconds = time.time()
                         show['episodeNumber'] +=1
                         return 
                     if any(keyword in entry.title for keyword in search_keywords):
                         print(Fore.GREEN  + "Found episode: " + show["showName"] + Fore.WHITE)
-                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/media/dan/Anime/Anime/"+show_name,category=show_name)                    
+                        qbt_client.torrents.add(entry.nyaa_infohash,is_sequential_download=True,save_path="/mnt/Anime/Anime/"+show_name,category=show_name)                    
                         show['uploadTime'] = timestamp_seconds = time.time()
                         show['episodeNumber'] +=1
                         return 
