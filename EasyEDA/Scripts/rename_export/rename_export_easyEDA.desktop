@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=LCSC Export Rename & Commit
+Exec=/home/dan/Documents/Git/MyProjects/EasyEDA/Scripts/rename_export/rename_export_easyEDA.py %F
+Terminal=true
+Icon=folder
+MimeType=inode/directory;
