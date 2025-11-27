@@ -15,27 +15,48 @@
     },
     {
         "enabled": true,
-        "showName": "Gachiakuta",
+        "showName": "One Punch Man",
+        "seasonNumber": 3,
+        "episodeNumber": 8,
+        "uploadTime": 1763930889.3196375
+    },
+    {
+        "enabled": false,
+        "showName": "TOUGEN ANKI",
         "seasonNumber": 1,
-        "episodeNumber": 12,
-        "uploadTime": 1758477758.204141
+        "episodeNumber": 14,
+        "uploadTime": 1759914258.2686353
     },
     {
         "enabled": true,
+        "showName": "3-nen Z-gumi Ginpachi-sensei",
+        "seasonNumber": 1,
+        "episodeNumber": 9,
+        "uploadTime": 1764011544.782778
+    },
+    {
+        "enabled": true,
+        "showName": "Gachiakuta",
+        "seasonNumber": 1,
+        "episodeNumber": 21,
+        "uploadTime": 1763930890.8567069
+    },
+    {
+        "enabled": false,
         "showName": "The Earthbound Mole",
         "seasonNumber": 1,
         "episodeNumber": 13,
         "uploadTime": 1758503723.7829301
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Dragon Raja ii",
         "seasonNumber": 1,
         "episodeNumber": 6,
         "uploadTime": 1754622133.802092
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Clevatess",
         "seasonNumber": 1,
         "episodeNumber": 13,
@@ -45,11 +66,11 @@
         "enabled": true,
         "showName": "The Water Magician",
         "seasonNumber": 1,
-        "episodeNumber": 12,
-        "uploadTime": 1758225990.4637625
+        "episodeNumber": 13,
+        "uploadTime": 1758833781.656916
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Lord of Mysteries",
         "seasonNumber": -1,
         "episodeNumber": 14,
@@ -66,11 +87,11 @@
         "enabled": true,
         "showName": "Kijin Gentoushou",
         "seasonNumber": 1,
-        "episodeNumber": 23,
-        "uploadTime": 1757375162.4044166
+        "episodeNumber": 25,
+        "uploadTime": 1759270082.3708277
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "To be hero X",
         "seasonNumber": 1,
         "episodeNumber": 25,
@@ -140,7 +161,7 @@
         "uploadTime": 1727155591.4025307
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "DandaDan",
         "seasonNumber": 2,
         "episodeNumber": 13,
@@ -227,8 +248,8 @@
         "enabled": true,
         "showName": "Kaiju",
         "seasonNumber": 2,
-        "episodeNumber": 11,
-        "uploadTime": 1758393343.5395427
+        "episodeNumber": 12,
+        "uploadTime": 1759026924.282887
     },
     {
         "enabled": false,

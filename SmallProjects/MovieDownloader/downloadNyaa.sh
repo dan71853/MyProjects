@@ -1,5 +1,5 @@
 #!/bin/bash
-qbittorrent & disown
+nohup qbittorrent &
 
 sleep 2
 source /home/dan/Documents/Git/MyProjects/SmallProjects/MovieDownloader/.venv/bin/activate
