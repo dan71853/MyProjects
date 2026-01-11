@@ -14,11 +14,18 @@
         "uploadTime": 1736399495.0365357
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "One Punch Man",
         "seasonNumber": 3,
-        "episodeNumber": 11,
-        "uploadTime": 1765745444.0025148
+        "episodeNumber": 13,
+        "uploadTime": 1767648395.367861
+    },
+    {
+        "enabled": true,
+        "showName": "Golden Kamuy",
+        "seasonNumber": 5,
+        "episodeNumber": 2,
+        "uploadTime": 1767648491.0274773
     },
     {
         "enabled": false,
@@ -31,15 +38,15 @@
         "enabled": true,
         "showName": "3-nen Z-gumi Ginpachi-sensei",
         "seasonNumber": 1,
-        "episodeNumber": 12,
-        "uploadTime": 1765827488.3529272
+        "episodeNumber": 13,
+        "uploadTime": 1767648398.0262089
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Gachiakuta",
         "seasonNumber": 1,
-        "episodeNumber": 24,
-        "uploadTime": 1765745445.2551007
+        "episodeNumber": 25,
+        "uploadTime": 1766382756.7762644
     },
     {
         "enabled": false,
@@ -63,7 +70,7 @@
         "uploadTime": 1758133486.0278094
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "The Water Magician",
         "seasonNumber": 1,
         "episodeNumber": 13,
@@ -84,7 +91,7 @@
         "uploadTime": 1736399495.0365357
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Kijin Gentoushou",
         "seasonNumber": 1,
         "episodeNumber": 25,
@@ -245,7 +252,7 @@
         "uploadTime": 1752006346.7068257
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Kaiju",
         "seasonNumber": 2,
         "episodeNumber": 12,
@@ -399,10 +406,10 @@
         "uploadTime": -1
     },
     {
-        "enabled": false,
+        "enabled": true,
         "showName": "Jigokuraku",
-        "seasonNumber": 1,
-        "episodeNumber": 14,
+        "seasonNumber": 2,
+        "episodeNumber": 1,
         "uploadTime": -1
     },
     {
@@ -427,11 +434,11 @@
         "uploadTime": -1
     },
     {
-        "enabled": false,
+        "enabled": true,
         "showName": "Jujutsu kaisen",
-        "seasonNumber": 2,
-        "episodeNumber": 24,
-        "uploadTime": -1
+        "seasonNumber": 3,
+        "episodeNumber": 3,
+        "uploadTime": 1767898784.6753287
     },
     {
         "enabled": false,
