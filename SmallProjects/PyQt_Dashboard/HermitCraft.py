@@ -18,7 +18,8 @@ def getJsonResponse():
     return response.json()
 
 
-def printLatestEpisodes(num:int=5):
+def getLatestEpisodes(num:int=5):
+    returnString = ""
     response = getJsonResponse()
     for i in range(num):
         singleEpisode = response[i]
@@ -26,22 +27,25 @@ def printLatestEpisodes(num:int=5):
         if "hour" in uploadedTime or "minute" in uploadedTime:
             uploader = singleEpisode["uploader"]["ChannelName"]
             title = singleEpisode["title"]
-            string = "%s\n%s\n%s\n"%(uploader, title, uploadedTime)
-            print(string)
+            string = "%s\n%s\n%s\n\n"%(uploader, title, uploadedTime)
+            returnString += string
+    return returnString
 
-def printLiveHermits():
+def getLiveHermits():
+    returnString = ""
     response = requests.get("https://hermitcraft.com/api/hermit").json()
     for hermits in response:
         if hermits["Streaming"]:
-            print(hermits["DisplayName"] + " - https://www.twitch.tv/" + hermits["TwitchName"])
+            returnString += hermits["DisplayName"] + " - https://www.twitch.tv/" + hermits["TwitchName"]
+    return returnString
 
+def getAllStatus():
+    return getLiveHermits() + "\n\n" + getLatestEpisodes()
 
-
-while(1):
-    os.system('clear')
-    printLiveHermits()
-    print("\n\n")
-    printLatestEpisodes()
-    sleep(REFRESH_TIME_M*60)
+# For testing
+# while(1):
+#     os.system('clear')
+#     print(getAllStatus())
+#     sleep(REFRESH_TIME_M*60)
 
     
