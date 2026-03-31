@@ -36,7 +36,7 @@ def getLiveHermits():
     response = requests.get("https://hermitcraft.com/api/hermit").json()
     for hermits in response:
         if hermits["Streaming"]:
-            returnString += hermits["DisplayName"] + " - https://www.twitch.tv/" + hermits["TwitchName"]
+            returnString += hermits["DisplayName"] + " - https://www.twitch.tv/" + hermits["TwitchName"] + "\n"
     return returnString
 
 def getAllStatus():
