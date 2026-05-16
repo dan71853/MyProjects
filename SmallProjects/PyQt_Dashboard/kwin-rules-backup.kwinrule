@@ -1,0 +1,14 @@
+[pyqt-dashboard]
+Description=pyqt-dashboard
+position=0,0
+positionrule=2
+size=480,840
+sizerule=2
+skipswitcher=true
+skipswitcherrule=2
+skiptaskbar=true
+skiptaskbarrule=2
+title=pyqt-dashboard
+titlematch=1
+wmclass=python3
+wmclassmatch=1

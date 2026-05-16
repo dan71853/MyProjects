@@ -7,29 +7,34 @@
 
 ## Auto Startup
 
-- `sudo nano /etc/systemd/system/python-dashboard.service`
-
+- `sudo nano /etc/systemd/user/python-dashboard.service`
+ 
 ```
 [Unit]
 Description=Dashboard Python Service
-After=network.target
 
 [Service]
-Type=simple
 ExecStart=/usr/bin/python3 /home/dan/Projects/MyRepos/MyProjects/SmallProjects/PyQt_Dashboard/main.py
 WorkingDirectory=/home/dan/Projects/MyRepos/MyProjects/SmallProjects/PyQt_Dashboard/
 Restart=always
-User=dan
-Group=users
+
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/dan/.Xauthority
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 ```
 
+enable with
+``` 
+systemctl --user daemon-reload
+systemctl --user enable python-dashboard.service
+systemctl --user start python-dashboard.service
+```
 
-```
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
-sudo systemctl enable python-dashboard.service
-sudo systemctl start python-dashboard.service
-```
+check with
+`systemctl --user status python-dashboard.service`
+
+
+## Force Location Wayland 
+Import the `./kwin-riles-backup` file as a kwin rule

@@ -17,7 +17,7 @@ class PyQtApp(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Testing QT")
+        self.setWindowTitle("pyqt-dashboard")
         self.setGeometry(0, 0, 480, 600)
 
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
