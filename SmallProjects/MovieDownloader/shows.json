@@ -1,5 +1,54 @@
 [
     {
+        "enabled": true,
+        "showName": "Dorohedoro",
+        "seasonNumber": 2,
+        "episodeNumber": 12,
+        "uploadTime": 1779908635.2009466
+    },
+    {
+        "enabled": true,
+        "showName": "Isekai Tensei Nani ni Naritai desu ka",
+        "seasonNumber": 1,
+        "episodeNumber": 13,
+        "uploadTime": 1782765394.5110965
+    },
+    {
+        "enabled": true,
+        "showName": "Re:Zero",
+        "seasonNumber": 4,
+        "episodeNumber": 12,
+        "uploadTime": 1781841198.3084974
+    },
+    {
+        "enabled": true,
+        "showName": "Witch Hat Atelier",
+        "seasonNumber": 1,
+        "episodeNumber": 14,
+        "uploadTime": 1782184006.242264
+    },
+    {
+        "enabled": true,
+        "showName": "Nippon Sangoku",
+        "seasonNumber": 1,
+        "episodeNumber": 13,
+        "uploadTime": 1782107114.3491855
+    },
+    {
+        "enabled": true,
+        "showName": "Wistoria",
+        "seasonNumber": 2,
+        "episodeNumber": 13,
+        "uploadTime": 1782765397.3868136
+    },
+    {
+        "enabled": true,
+        "showName": "Yomi no Tsugai",
+        "seasonNumber": 1,
+        "episodeNumber": 14,
+        "uploadTime": 1783215695.0635436
+    },
+    {
         "enabled": false,
         "showName": "Chiyu Mahou no Machigatta Tsukaikata",
         "seasonNumber": 1,
@@ -21,7 +70,7 @@
         "uploadTime": 1767648395.367861
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Golden Kamuy",
         "seasonNumber": 5,
         "episodeNumber": 2,
@@ -35,7 +84,7 @@
         "uploadTime": 1759914258.2686353
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "3-nen Z-gumi Ginpachi-sensei",
         "seasonNumber": 1,
         "episodeNumber": 13,
@@ -406,7 +455,7 @@
         "uploadTime": -1
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Jigokuraku",
         "seasonNumber": 2,
         "episodeNumber": 1,
@@ -434,7 +483,7 @@
         "uploadTime": -1
     },
     {
-        "enabled": true,
+        "enabled": false,
         "showName": "Jujutsu kaisen",
         "seasonNumber": 3,
         "episodeNumber": 3,

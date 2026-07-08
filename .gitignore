@@ -19,3 +19,4 @@ STL/
 LargeProjects/EPaper/Python/log.txt
 .venv/
 *.FCBak
+*nohup.out
