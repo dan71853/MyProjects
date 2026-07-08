@@ -16,7 +16,7 @@ def poll_website(show):
         return
         
     print(Fore.GREEN  + "Found episode: " + show["alias"] + Fore.WHITE)
-    qbt_client.torrents.add(hash,is_sequential_download=True,save_path="base_save_path"+show['alias'],category=show['alias'])                    
+    qbt_client.torrents.add(hash,is_sequential_download=True,save_path=base_save_path+show['alias'],category=show['alias'])                    
     show['uploadTime'] = timestamp_seconds = time.time()
     show['episodeNumber'] +=1    
                     
