@@ -5,6 +5,30 @@
         "alias": "Ghost in the Shell (2026)",
         "seasonNumber": 1,
         "episodeNumber": 2,
-        "uploadTime": 1783484119.5345306
+        "uploadTime": 1783490511.2263293
+    },
+    {
+        "enabled": true,
+        "showName": "Clevatess",
+        "alias": "Clevatess",
+        "seasonNumber": 2,
+        "episodeNumber": 2,
+        "uploadTime": 1783541644.4054422
+    },
+    {
+        "enabled": true,
+        "showName": "Saga of Tanya the Evil",
+        "alias": "Saga of Tanya the Evil",
+        "seasonNumber": 2,
+        "episodeNumber": 2,
+        "uploadTime": 1783826930.093545
+    },
+    {
+        "enabled": true,
+        "showName": "Yomi no Tsugai",
+        "alias": "Daemons of the Shadow Realm",
+        "seasonNumber": 1,
+        "episodeNumber": 14,
+        "uploadTime": 1783826930.8382087
     }
 ]
